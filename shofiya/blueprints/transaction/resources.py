@@ -31,7 +31,7 @@ class TransactionResource(Resource):
         parser = reqparse.RequestParser()
         parser.add_argument("product_id", type=int, location="json")
         parser.add_argument("qty", type=int, location="json")
-        parser.add_argument("shipping_method", type=int, location="json")
+        parser.add_argument("shipping_method_id", type=int, location="json")
 
         parser.add_argument("payment_method_id", type=int, location="json")
 

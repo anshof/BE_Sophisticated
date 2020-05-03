@@ -43,7 +43,7 @@ class Sellers(db.Model):
         'updated_at': fields.DateTime
     }
 
-    def __init__(self, name, email, province, city, postal_code, city_type, street, phone, bank_account, client_id):
+    def __init__(self, name, email, province, city, postal_code, city_type, street, phone, bank_account):
         self.name = name
         self.email = email
         self.province = province
@@ -53,7 +53,6 @@ class Sellers(db.Model):
         self.street = street
         self.phone = phone
         self.bank_account = bank_account
-        self.client_id = client_id
 
     def __repr__(self):
         return '<Seller %r>' % self.id

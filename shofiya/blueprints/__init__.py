@@ -18,7 +18,7 @@ def admin_required(fn):
     def wrapper(*args, **kwargs):
         verify_jwt_in_request()
         claims = get_jwt_claims()
-        if claims['status'] == 'admin':
+        if claims['status'] != 'admin':
             return {'status': 'FORBIDDEN', 'message': 'Admin Only!'}, 403
         else:
             return fn(*args, **kwargs)
@@ -30,7 +30,7 @@ def buyer_required(fn):
     def wrapper(*args, **kwargs):
         verify_jwt_in_request()
         claims = get_jwt_claims()
-        if claims['status'] == 'buyer':
+        if claims['status'] != 'buyer':
             return {'status': 'FORBIDDEN', 'message': 'Buyer Only!'}, 403
         else:
             return fn(*args, **kwargs)
@@ -42,7 +42,7 @@ def seller_required(fn):
     def wrapper(*args, **kwargs):
         verify_jwt_in_request()
         claims = get_jwt_claims()
-        if claims['status'] == 'seller':
+        if claims['status'] != 'seller':
             return {'status': 'FORBIDDEN', 'message': 'Seller Only!'}, 403
         else:
             return fn(*args, **kwargs)

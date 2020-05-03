@@ -19,8 +19,8 @@ class Transactions(db.Model):
                            server_default=db.func.now())
     updated_at = db.Column(db.DateTime(timezone=True), onupdate=func.now())
     customer_id = db.Column(db.Integer, db.ForeignKey('customer.id'))
-    payment_method = db.Column(db.Integer, db.ForeignKey('payment_method.id'))
-    shipping_method = db.Column(db.Integer, db.ForeignKey('shipping_method.id'))
+    payment_method_id = db.Column(db.Integer, db.ForeignKey('payment_method.id'))
+    shipping_method_id = db.Column(db.Integer, db.ForeignKey('shipping_method.id'))
     transaction_detail = db.relationship(
         'TransactionDetails', backref='transaction', lazy=True)
 

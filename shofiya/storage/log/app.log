@@ -1,808 +1,249 @@
-[2020-04-17 12:51:13,187] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /auth [GET]
+[2020-05-03 22:05:32,754] {/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /client [GET]
 Traceback (most recent call last):
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
     resp = resource(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/views.py", line 89, in view
     return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
     resp = meth(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/auth/__init__.py", line 23, in get
-    hash_pass = hashlib.sha512(encoded).hexdigest()
-NameError: name 'hashlib' is not defined
-[2020-04-17 12:51:13,190] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:44} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/auth?", "request": {"client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15", "status": "ok"}, "response": {"message": "Internal Server Error"}}
-[2020-04-17 12:51:20,013] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /auth [GET]
+  File "/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/__init__.py", line 19, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 32, in verify_jwt_in_request
+    jwt_data, jwt_header = _decode_jwt_from_request(request_type='access')
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 314, in _decode_jwt_from_request
+    raise NoAuthorizationError(errors[0])
+flask_jwt_extended.exceptions.NoAuthorizationError: Missing Authorization Header
+[2020-05-03 22:05:32,757] {/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/__init__.py:85} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/client?", "request": null, "response": {"message": "Internal Server Error"}}
+[2020-05-03 22:10:48,974] {/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /client [GET]
 Traceback (most recent call last):
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
     resp = resource(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/views.py", line 89, in view
     return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
     resp = meth(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/auth/__init__.py", line 23, in get
-    hash_pass = hashlib.sha512(encoded).hexdigest()
-NameError: name 'hashlib' is not defined
-[2020-04-17 12:51:20,014] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:44} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/auth?", "request": {"client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15"}, "response": {"message": "Internal Server Error"}}
-[2020-04-17 12:53:38,744] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /auth [GET]
+  File "/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/__init__.py", line 19, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 32, in verify_jwt_in_request
+    jwt_data, jwt_header = _decode_jwt_from_request(request_type='access')
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 314, in _decode_jwt_from_request
+    raise NoAuthorizationError(errors[0])
+flask_jwt_extended.exceptions.NoAuthorizationError: Missing Authorization Header
+[2020-05-03 22:10:48,975] {/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/__init__.py:85} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/client?", "request": {"username": "shofi", "password": "alta123", "status": "admin"}, "response": {"message": "Internal Server Error"}}
+[2020-05-03 22:13:05,981] {/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /client [GET]
 Traceback (most recent call last):
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
     resp = resource(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/views.py", line 89, in view
     return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
     resp = meth(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/auth/__init__.py", line 26, in get
-    if hash_pass == qry_client.client_secret:
-NameError: name 'qry_client' is not defined
-[2020-04-17 12:53:38,747] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:44} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/auth?", "request": {"client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15"}, "response": {"message": "Internal Server Error"}}
-[2020-04-17 12:54:38,437] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:44} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/auth?", "request": {"client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15"}, "response": {"status": "NOT_FOUND"}}
-[2020-04-17 12:55:51,236] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/client?", "request": {"client_key": "908", "client_secret": "abc", "status": "status"}, "response": {"id": 3, "client_key": "908", "client_secret": "0f23d470527257c1aff1e6a761596a44f3d43c1307bf8ce24a403d890aa5ea47a4db7557e91db550311d523a960b7c3dfd12a930f08e12164e518ad2a3d8ced8", "status": "status", "created_at": "2020-04-17 12:55:51", "updated_at": null}}
-[2020-04-17 12:56:02,719] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/auth?", "request": {"client_key": "908", "client_secret": "abc", "status": "status"}, "response": {"id": 3, "client_key": "908", "client_secret": "0f23d470527257c1aff1e6a761596a44f3d43c1307bf8ce24a403d890aa5ea47a4db7557e91db550311d523a960b7c3dfd12a930f08e12164e518ad2a3d8ced8", "status": "status", "created_at": "2020-04-17 12:55:51", "updated_at": null}}
-[2020-04-17 13:13:21,054] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/auth?client_key=908&client_secret=abc", "request": {"client_key": "908", "client_secret": "abc"}, "response": {"id": 3, "client_key": "908", "client_secret": "0f23d470527257c1aff1e6a761596a44f3d43c1307bf8ce24a403d890aa5ea47a4db7557e91db550311d523a960b7c3dfd12a930f08e12164e518ad2a3d8ced8", "status": "status", "created_at": "2020-04-17 12:55:51", "updated_at": null}}
-[2020-04-17 13:43:20,634] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:43} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/auth?client_key=908&client_secret=abc", "request": {"client_key": "908", "client_secret": "abc"}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODcxMDU4MDAsIm5iZiI6MTU4NzEwNTgwMCwianRpIjoiZmE0YjU0MDUtMzFjMy00Y2M1LWIyZGEtMTllMjM2NTQ2NjIyIiwiZXhwIjoxNTg3MTkyMjAwLCJpZGVudGl0eSI6IjkwOCIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7ImlkIjozLCJjbGllbnRfa2V5IjoiOTA4IiwiY2xpZW50X3NlY3JldCI6IjBmMjNkNDcwNTI3MjU3YzFhZmYxZTZhNzYxNTk2YTQ0ZjNkNDNjMTMwN2JmOGNlMjRhNDAzZDg5MGFhNWVhNDdhNGRiNzU1N2U5MWRiNTUwMzExZDUyM2E5NjBiN2MzZGZkMTJhOTMwZjA4ZTEyMTY0ZTUxOGFkMmEzZDhjZWQ4Iiwic3RhdHVzIjoic3RhdHVzIiwiY3JlYXRlZF9hdCI6IjIwMjAtMDQtMTcgMTI6NTU6NTEiLCJ1cGRhdGVkX2F0IjpudWxsfX0.sVCXYFVKe4u4N-AS8TEzoxq-kd8sU5V_b30rXfcgYl0"}}
-[2020-04-17 13:45:43,601] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:50} WARNING-REQUEST_LOG	{"method": "GET", "code": "401 UNAUTHORIZED", "uri": "/auth?client_key=908&client_secret=abcd", "request": {"client_key": "908", "client_secret": "abcd"}, "response": {"status": "UNAUTHORIZED", "message": "invalid key or secret"}}
-[2020-04-17 13:45:47,797] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:43} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/auth?client_key=908&client_secret=abc", "request": {"client_key": "908", "client_secret": "abc"}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODcxMDU5NDcsIm5iZiI6MTU4NzEwNTk0NywianRpIjoiNTY0NzZjZDMtOTAyOC00YTNmLWIyOGYtYjlmYTNiNDk2YmI5IiwiZXhwIjoxNTg3MTkyMzQ3LCJpZGVudGl0eSI6IjkwOCIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7ImlkIjozLCJjbGllbnRfa2V5IjoiOTA4IiwiY2xpZW50X3NlY3JldCI6IjBmMjNkNDcwNTI3MjU3YzFhZmYxZTZhNzYxNTk2YTQ0ZjNkNDNjMTMwN2JmOGNlMjRhNDAzZDg5MGFhNWVhNDdhNGRiNzU1N2U5MWRiNTUwMzExZDUyM2E5NjBiN2MzZGZkMTJhOTMwZjA4ZTEyMTY0ZTUxOGFkMmEzZDhjZWQ4Iiwic3RhdHVzIjoic3RhdHVzIiwiY3JlYXRlZF9hdCI6IjIwMjAtMDQtMTcgMTI6NTU6NTEiLCJ1cGRhdGVkX2F0IjpudWxsfX0.8uGfdWOX4v1DmTIbVNcQbBhwSPXdP_AMslCz2-7yFuE"}}
-[2020-04-17 13:48:57,566] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /auth [GET]
+  File "/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/__init__.py", line 19, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 32, in verify_jwt_in_request
+    jwt_data, jwt_header = _decode_jwt_from_request(request_type='access')
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 314, in _decode_jwt_from_request
+    raise NoAuthorizationError(errors[0])
+flask_jwt_extended.exceptions.NoAuthorizationError: Missing Authorization Header
+[2020-05-03 22:13:05,982] {/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/__init__.py:85} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/client?", "request": {"username": "shofi", "password": "alta123", "status": "admin"}, "response": {"message": "Internal Server Error"}}
+[2020-05-03 22:15:27,873] {/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /client [POST]
 Traceback (most recent call last):
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
     resp = resource(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/views.py", line 89, in view
     return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
     resp = meth(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/auth/__init__.py", line 28, in get
-    token=create_access_token(identity=args['client_key'], user_claims= id)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_jwt_extended/utils.py", line 173, in create_access_token
-    headers=headers)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_jwt_extended/jwt_manager.py", line 522, in _create_access_token
-    headers=headers
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_jwt_extended/tokens.py", line 77, in encode_access_token
-    json_encoder=json_encoder, headers=headers)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_jwt_extended/tokens.py", line 30, in _encode_jwt
-    json_encoder=json_encoder, headers=headers).decode('utf-8')
-  File "/home/alta16/.local/lib/python3.6/site-packages/jwt/api_jwt.py", line 61, in encode
-    cls=json_encoder
-  File "/usr/lib/python3.6/json/__init__.py", line 238, in dumps
-    **kw).encode(obj)
-  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 291, in encode
-    chunks = self.iterencode(o, _one_shot=True)
-  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 373, in iterencode
-    return _iterencode(o, 0)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/json/__init__.py", line 100, in default
-    return _json.JSONEncoder.default(self, o)
-  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 268, in default
-    o.__class__.__name__)
-TypeError: Object of type builtin_function_or_method is not JSON serializable
-[2020-04-17 13:48:57,573] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:50} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/auth?client_key=908&client_secret=abc", "request": {"client_key": "908", "client_secret": "abc"}, "response": {"message": "Internal Server Error"}}
-[2020-04-17 13:49:16,895] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /auth [GET]
+  File "/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/client/resources.py", line 57, in post
+    client = Clients(data['username'], hash_pass, data['status'], salt)
+  File "<string>", line 2, in __init__
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/sqlalchemy/orm/instrumentation.py", line 376, in _new_state_if_none
+    state = self._state_constructor(instance, self)
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 883, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/sqlalchemy/orm/instrumentation.py", line 202, in _state_constructor
+    self.dispatch.first_init(self, self.class_)
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/sqlalchemy/event/attr.py", line 322, in __call__
+    fn(*args, **kw)
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/sqlalchemy/orm/mapper.py", line 3367, in _event_on_first_init
+    configure_mappers()
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/sqlalchemy/orm/mapper.py", line 3255, in configure_mappers
+    mapper._post_configure_properties()
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/sqlalchemy/orm/mapper.py", line 1950, in _post_configure_properties
+    prop.init()
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/sqlalchemy/orm/interfaces.py", line 196, in init
+    self.do_init()
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/sqlalchemy/orm/relationships.py", line 1987, in do_init
+    self._generate_backref()
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/sqlalchemy/orm/relationships.py", line 2221, in _generate_backref
+    % (backref_key, self, m)
+sqlalchemy.exc.ArgumentError: Error creating backref 'shipping_method' on relationship 'ShippingMethods.transactions': property of that name exists on mapper 'mapped class Transactions->transaction'
+[2020-05-03 22:15:27,877] {/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/__init__.py:85} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/client?", "request": {"username": "shofi", "password": "alta123", "status": "admin"}, "response": {"message": "Internal Server Error"}}
+[2020-05-03 22:17:15,503] {/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/__init__.py:78} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/client?", "request": {"username": "shofi", "password": "alta123", "status": "admin"}, "response": {"id": 1, "username": "shofi", "password": "56d6960ce708ee2c8426d0c4fe06a3c4ab49c64c33569969e69bc4b41c2e2671b8a273a22196d915c8548aff983489b0e45ec06f51de0d5c2a798a86d137ba36", "status": "admin", "created_at": "Sun, 03 May 2020 22:17:15 -0000", "updated_at": null}}
+[2020-05-03 22:25:51,165] {/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /login [GET]
 Traceback (most recent call last):
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
     resp = resource(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/views.py", line 89, in view
     return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
     resp = meth(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/auth/__init__.py", line 28, in get
-    token=create_access_token(identity=args['client_key'], user_claims= client_key)
-NameError: name 'client_key' is not defined
-[2020-04-17 13:49:16,901] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:50} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/auth?client_key=908&client_secret=abc", "request": {"client_key": "908", "client_secret": "abc"}, "response": {"message": "Internal Server Error"}}
-[2020-04-17 13:50:20,435] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /auth [GET]
+  File "/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/login/__init__.py", line 29, in get
+    qry_client = marshal(qry_client, Users.jwt_client_fields)
+NameError: name 'Users' is not defined
+[2020-05-03 22:25:51,168] {/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/__init__.py:85} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/login?username=shofi&password=alta123", "request": null, "response": {"message": "Internal Server Error"}}
+[2020-05-03 22:27:16,315] {/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /login [GET]
 Traceback (most recent call last):
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
     resp = resource(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/views.py", line 89, in view
     return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
     resp = meth(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/auth/__init__.py", line 28, in get
-    token=create_access_token(identity=args['client_key'], user_claims= client_key)
-NameError: name 'client_key' is not defined
-[2020-04-17 13:50:20,438] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:50} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/auth?client_key=908&client_secret=abc", "request": {"client_key": "908", "client_secret": "abc"}, "response": {"message": "Internal Server Error"}}
-[2020-04-17 13:51:25,596] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /auth [GET]
+  File "/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/login/__init__.py", line 29, in get
+    qry_client = marshal(qry_client, Users.jwt_claim_fields)
+NameError: name 'Users' is not defined
+[2020-05-03 22:27:16,316] {/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/__init__.py:85} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/login?username=shofi&password=alta123", "request": null, "response": {"message": "Internal Server Error"}}
+[2020-05-03 22:27:31,831] {/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /login [GET]
 Traceback (most recent call last):
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
     resp = resource(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/views.py", line 89, in view
     return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
     resp = meth(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/auth/__init__.py", line 28, in get
-    token=create_access_token(identity=args['client_key'], user_claims= status)
-NameError: name 'status' is not defined
-[2020-04-17 13:51:25,600] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:50} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/auth?client_key=908&client_secret=abc", "request": {"client_key": "908", "client_secret": "abc"}, "response": {"message": "Internal Server Error"}}
-[2020-04-17 13:51:50,560] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:43} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/auth?client_key=908&client_secret=abc", "request": {"client_key": "908", "client_secret": "abc"}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODcxMDYzMTAsIm5iZiI6MTU4NzEwNjMxMCwianRpIjoiM2IzOTkxZTMtZjYyMS00YTlkLTg2ZDAtYmVjYTgzZTVkMzZhIiwiZXhwIjoxNTg3MTkyNzEwLCJpZGVudGl0eSI6IjkwOCIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7ImlkIjozLCJjbGllbnRfa2V5IjoiOTA4IiwiY2xpZW50X3NlY3JldCI6IjBmMjNkNDcwNTI3MjU3YzFhZmYxZTZhNzYxNTk2YTQ0ZjNkNDNjMTMwN2JmOGNlMjRhNDAzZDg5MGFhNWVhNDdhNGRiNzU1N2U5MWRiNTUwMzExZDUyM2E5NjBiN2MzZGZkMTJhOTMwZjA4ZTEyMTY0ZTUxOGFkMmEzZDhjZWQ4Iiwic3RhdHVzIjoic3RhdHVzIiwiY3JlYXRlZF9hdCI6IjIwMjAtMDQtMTcgMTI6NTU6NTEiLCJ1cGRhdGVkX2F0IjpudWxsfX0.H6TAnz8lZoGIyPQuv5gjCIpN04AqM-GkMGVkwwYwqH4"}}
-[2020-04-17 13:53:59,253] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /auth [GET]
+  File "/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/login/__init__.py", line 29, in get
+    qry_client = marshal(qry_client, Users.jwt_claim_fields)
+NameError: name 'Users' is not defined
+[2020-05-03 22:27:31,834] {/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/__init__.py:85} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/login?username=shofi&password=alta123", "request": null, "response": {"message": "Internal Server Error"}}
+[2020-05-03 22:27:54,575] {/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /login [GET]
 Traceback (most recent call last):
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
     resp = resource(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/views.py", line 89, in view
     return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
     resp = meth(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/auth/__init__.py", line 28, in get
-    token=create_access_token(identity=args['client_key'], user_claims= qry)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_jwt_extended/utils.py", line 173, in create_access_token
-    headers=headers)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_jwt_extended/jwt_manager.py", line 522, in _create_access_token
-    headers=headers
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_jwt_extended/tokens.py", line 77, in encode_access_token
-    json_encoder=json_encoder, headers=headers)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_jwt_extended/tokens.py", line 30, in _encode_jwt
-    json_encoder=json_encoder, headers=headers).decode('utf-8')
-  File "/home/alta16/.local/lib/python3.6/site-packages/jwt/api_jwt.py", line 61, in encode
-    cls=json_encoder
-  File "/usr/lib/python3.6/json/__init__.py", line 238, in dumps
-    **kw).encode(obj)
-  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 291, in encode
-    chunks = self.iterencode(o, _one_shot=True)
-  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 373, in iterencode
-    return _iterencode(o, 0)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/json/__init__.py", line 100, in default
-    return _json.JSONEncoder.default(self, o)
-  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 268, in default
-    o.__class__.__name__)
-TypeError: Object of type Clients is not JSON serializable
-[2020-04-17 13:53:59,260] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:50} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/auth?client_key=908&client_secret=abc", "request": {"client_key": "908", "client_secret": "abc"}, "response": {"message": "Internal Server Error"}}
-[2020-04-17 13:55:13,684] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /auth [GET]
+  File "/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/login/__init__.py", line 29, in get
+    qry_client = marshal(qry_client, Clients.jwt_claim_fields)
+AttributeError: type object 'Clients' has no attribute 'jwt_claim_fields'
+[2020-05-03 22:27:54,578] {/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/__init__.py:85} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/login?username=shofi&password=alta123", "request": null, "response": {"message": "Internal Server Error"}}
+[2020-05-03 22:28:26,077] {/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/__init__.py:78} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/login?username=shofi&password=alta123", "request": null, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODg1MTk3MDYsIm5iZiI6MTU4ODUxOTcwNiwianRpIjoiOWQ0Mjk3MDAtYzc1OC00ODdjLTg1YzktZGM2ODJiNzdhN2JkIiwiZXhwIjoxNTg4NjA2MTA2LCJpZGVudGl0eSI6InNob2ZpIiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIiwidXNlcl9jbGFpbXMiOnsiaWQiOjEsInVzZXJuYW1lIjoic2hvZmkiLCJzdGF0dXMiOiJhZG1pbiIsImlkZW50aWZpZXIiOiJzaG9maXlhIn19.XQ78acTr8RtNWYxzLHf_IxsrUJCOiDcBiLejGuHi2F4"}}
+[2020-05-03 22:35:23,856] {/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /shipping_method [POST]
 Traceback (most recent call last):
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
     resp = resource(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/views.py", line 89, in view
     return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
     resp = meth(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/auth/__init__.py", line 28, in get
-    token=create_access_token(identity=args['client_key'], user_claims= qry)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_jwt_extended/utils.py", line 173, in create_access_token
-    headers=headers)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_jwt_extended/jwt_manager.py", line 522, in _create_access_token
-    headers=headers
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_jwt_extended/tokens.py", line 77, in encode_access_token
-    json_encoder=json_encoder, headers=headers)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_jwt_extended/tokens.py", line 30, in _encode_jwt
-    json_encoder=json_encoder, headers=headers).decode('utf-8')
-  File "/home/alta16/.local/lib/python3.6/site-packages/jwt/api_jwt.py", line 61, in encode
-    cls=json_encoder
-  File "/usr/lib/python3.6/json/__init__.py", line 238, in dumps
-    **kw).encode(obj)
-  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 291, in encode
-    chunks = self.iterencode(o, _one_shot=True)
-  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 373, in iterencode
-    return _iterencode(o, 0)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/json/__init__.py", line 100, in default
-    return _json.JSONEncoder.default(self, o)
-  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 268, in default
-    o.__class__.__name__)
-TypeError: Object of type Clients is not JSON serializable
-[2020-04-17 13:55:13,689] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:50} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/auth?client_key=908&client_secret=abc", "request": {"client_key": "908", "client_secret": "abc"}, "response": {"message": "Internal Server Error"}}
-[2020-04-17 13:56:48,839] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:43} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/auth?client_key=908&client_secret=abc", "request": {"client_key": "908", "client_secret": "abc"}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODcxMDY2MDgsIm5iZiI6MTU4NzEwNjYwOCwianRpIjoiMDMwYjY5NmUtMWY3MC00MjFjLTk1ZjQtY2UyMzc5YTI3MWM3IiwiZXhwIjoxNTg3MTkzMDA4LCJpZGVudGl0eSI6IjkwOCIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7ImNsaWVudF9rZXkiOiI5MDgiLCJzdGF0dXMiOiJzdGF0dXMifX0.vhxOxKUJeMC592F9KZolzchWWWyYdXIJnWS1U_B-u4o"}}
-[2020-04-17 14:10:55,655] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:43} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/auth/refresh?", "request": {}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODcxMDc0NTUsIm5iZiI6MTU4NzEwNzQ1NSwianRpIjoiMzc1YzgzZjQtMDg2ZS00NjA5LWFjNTEtNGQyNjQwY2VlZjU5IiwiZXhwIjoxNTg3MTkzODU1LCJpZGVudGl0eSI6IjkwOCIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyJ9.U1K_qnTxryJvHhQMlYxFyc_463WVNouIrqbC1rqAmQ0"}}
-[2020-04-17 14:17:44,330] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /auth/refresh [POST]
+  File "/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/__init__.py", line 19, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 32, in verify_jwt_in_request
+    jwt_data, jwt_header = _decode_jwt_from_request(request_type='access')
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 314, in _decode_jwt_from_request
+    raise NoAuthorizationError(errors[0])
+flask_jwt_extended.exceptions.NoAuthorizationError: Missing Authorization Header
+[2020-05-03 22:35:23,859] {/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/__init__.py:85} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/shipping_method?", "request": {"courier": "JNE"}, "response": {"message": "Internal Server Error"}}
+[2020-05-03 22:36:02,539] {/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/__init__.py:85} WARNING-REQUEST_LOG	{"method": "POST", "code": "403 FORBIDDEN", "uri": "/shipping_method?", "request": {"courier": "JNE"}, "response": {"status": "FORBIDDEN", "message": "Admin Only!"}}
+[2020-05-03 22:37:44,493] {/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/__init__.py:78} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/shipping_method?", "request": {"courier": "JNE"}, "response": {"id": 1, "courier": "JNE"}}
+[2020-05-03 22:40:20,605] {/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/__init__.py:78} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/client?", "request": {"username": "oci", "password": "alta123", "status": "buyer"}, "response": {"id": 2, "username": "oci", "password": "630f679f8aeaaff59e9d7d8bc8390537dbb3c6b32c28af945eb5d3e0e35b8395918ca03cecd88feecfa096b8002497c31b05edd6341add4d0a1a3bbb43d08cc4", "status": "buyer", "created_at": "Sun, 03 May 2020 22:40:20 -0000", "updated_at": null}}
+[2020-05-03 22:41:07,453] {/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/__init__.py:78} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/login?username=oci&password=alta123", "request": null, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODg1MjA0NjcsIm5iZiI6MTU4ODUyMDQ2NywianRpIjoiMDJlNzc4MzYtNTlkNi00YjRiLTkxOGUtNWIxZmY4NjNhYWNlIiwiZXhwIjoxNTg4NjA2ODY3LCJpZGVudGl0eSI6Im9jaSIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7ImlkIjoyLCJ1c2VybmFtZSI6Im9jaSIsInN0YXR1cyI6ImJ1eWVyIiwiaWRlbnRpZmllciI6InNob2ZpeWEifX0.rpDlFmN1Qla9fa50U48mFTEufCocs-gfS9EzgZPkX_g"}}
+[2020-05-03 22:45:45,581] {/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /customer/profile [GET]
 Traceback (most recent call last):
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
     resp = resource(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/views.py", line 89, in view
     return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
     resp = meth(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 108, in wrapper
+  File "/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/__init__.py", line 31, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 32, in verify_jwt_in_request
+    jwt_data, jwt_header = _decode_jwt_from_request(request_type='access')
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 314, in _decode_jwt_from_request
+    raise NoAuthorizationError(errors[0])
+flask_jwt_extended.exceptions.NoAuthorizationError: Missing Authorization Header
+[2020-05-03 22:45:45,584] {/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/__init__.py:85} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/customer/profile?", "request": {"name": "ocici", "email": "oci@gmail.com", "province": "jawa barat", "city": "bandung", "postal_code": "65432", "city_type": "city", "street": "jalan merdeka", "phone": "12345678", "bod": "1996-06-04"}, "response": {"message": "Internal Server Error"}}
+[2020-05-03 22:46:15,808] {/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/__init__.py:85} WARNING-REQUEST_LOG	{"method": "GET", "code": "403 FORBIDDEN", "uri": "/customer/profile?", "request": {"name": "ocici", "email": "oci@gmail.com", "province": "jawa barat", "city": "bandung", "postal_code": "65432", "city_type": "city", "street": "jalan merdeka", "phone": "12345678", "bod": "1996-06-04"}, "response": {"status": "FORBIDDEN", "message": "Admin Only!"}}
+[2020-05-03 22:47:04,461] {/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/__init__.py:78} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/customer/profile?", "request": {"name": "ocici", "email": "oci@gmail.com", "province": "jawa barat", "city": "bandung", "postal_code": "65432", "city_type": "city", "street": "jalan merdeka", "phone": "12345678", "bod": "1996-06-04"}, "response": {"id": 1, "client_id": 2, "name": "ocici", "email": "oci@gmail.com", "province": "jawa barat", "city": "bandung", "postal_code": "65432", "city_type": "city", "street": "jalan merdeka", "phone": "12345678", "bod": "Tue, 04 Jun 1996 00:00:00 -0000", "created_at": "Sun, 03 May 2020 22:47:04 -0000", "updated_at": null}}
+[2020-05-03 22:48:58,646] {/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/__init__.py:78} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/client?", "request": {"username": "bagas", "password": "alta123", "status": "seller"}, "response": {"id": 3, "username": "bagas", "password": "f700db4ecbd76c78a7901a1a6a450d9adfffd5b7eb8388a90e941a21bf070702314ac0e701c87d7b2b47e1333feb894d2996e56812944cfef61372c12d02ee66", "status": "seller", "created_at": "Sun, 03 May 2020 22:48:58 -0000", "updated_at": null}}
+[2020-05-03 22:49:44,611] {/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/__init__.py:78} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/login?username=bagas&password=alta123", "request": null, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODg1MjA5ODQsIm5iZiI6MTU4ODUyMDk4NCwianRpIjoiNGM0Y2Y1N2EtMjU3Yi00YmJlLWFjYjctMmFjOWUxZmQ4NmNkIiwiZXhwIjoxNTg4NjA3Mzg0LCJpZGVudGl0eSI6ImJhZ2FzIiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIiwidXNlcl9jbGFpbXMiOnsiaWQiOjMsInVzZXJuYW1lIjoiYmFnYXMiLCJzdGF0dXMiOiJzZWxsZXIiLCJpZGVudGlmaWVyIjoic2hvZml5YSJ9fQ.eFsqCxjpueOcuyL4EP6vDMwvHomjVIR8GIc94v7l-Xs"}}
+[2020-05-03 22:52:01,778] {/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/__init__.py:85} WARNING-REQUEST_LOG	{"method": "POST", "code": "403 FORBIDDEN", "uri": "/customer/profile?", "request": {"name": "bagasgas", "email": "bagas@gmail.com", "province": "jawa tengah", "city": "cilacap", "postal_code": "63432", "city_type": "city", "street": "jalan pahlawan", "phone": "12345678", "bod": "1996-06-04"}, "response": {"status": "FORBIDDEN", "message": "Buyer Only!"}}
+[2020-05-03 22:52:25,238] {/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /seller/profile [POST]
+Traceback (most recent call last):
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/__init__.py", line 48, in wrapper
     return fn(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/auth/__init__.py", line 43, in post
-    token=create_access_token(identity=current_user, user_claims= qry)
-NameError: name 'qry' is not defined
-[2020-04-17 14:17:44,334] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:50} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/auth/refresh?", "request": {}, "response": {"message": "Internal Server Error"}}
-[2020-04-17 14:18:17,897] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:43} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/auth/refresh?", "request": {}, "response": {"claims": {"client_key": "908", "status": "status"}, "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODcxMDc4OTcsIm5iZiI6MTU4NzEwNzg5NywianRpIjoiZmNhOGEzYTAtMWIzYi00NGM4LTkwODgtYWQ3ZDYyNzU3OTViIiwiZXhwIjoxNTg3MTk0Mjk3LCJpZGVudGl0eSI6IjkwOCIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7ImNsaWVudF9rZXkiOiI5MDgiLCJzdGF0dXMiOiJzdGF0dXMifX0.wVOM5H598bCHavTiriaYoVXtsp0ZqPOrT-c7WJ76dW8"}}
-[2020-04-17 14:33:59,254] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:51} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/auth/refresh?", "request": {}, "response": {"claims": {"client_key": "908", "status": "status"}, "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODcxMDg4MzksIm5iZiI6MTU4NzEwODgzOSwianRpIjoiMzJiMGU5YTktMGUwYS00YjJjLTg1OGQtNmU0MTRhNDFkYjM3IiwiZXhwIjoxNTg3MTk1MjM5LCJpZGVudGl0eSI6IjkwOCIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7ImNsaWVudF9rZXkiOiI5MDgiLCJzdGF0dXMiOiJzdGF0dXMifX0.ukTeJCJsDsZ3PHTUAJDlgp7QSFy4pYo4iMqnZEKI4ZY"}}
-[2020-04-17 14:37:26,437] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:51} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/auth/refresh?", "request": {}, "response": {"claims": {"client_key": "908", "status": "status"}, "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODcxMDkwNDYsIm5iZiI6MTU4NzEwOTA0NiwianRpIjoiM2RhNjdmZTQtMzQ1YS00NmM5LThmMTMtNTlkZTFiMWIyYTU5IiwiZXhwIjoxNTg3MTk1NDQ2LCJpZGVudGl0eSI6IjkwOCIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7ImNsaWVudF9rZXkiOiI5MDgiLCJzdGF0dXMiOiJzdGF0dXMifX0.NVxuqID8I4_HknJU51wolRTqFyV-6BZfMYDoc70ZIRI"}}
-[2020-04-17 14:38:15,044] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:51} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/auth/refresh?", "request": {}, "response": {"claims": {"client_key": "908", "status": "status"}, "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODcxMDkwOTUsIm5iZiI6MTU4NzEwOTA5NSwianRpIjoiNmMwYzEzOGQtZmVlZi00OWQ3LWE5NmMtYTU3YjhkMWZhMTBmIiwiZXhwIjoxNTg3MTk1NDk1LCJpZGVudGl0eSI6IjkwOCIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7ImNsYWltcyI6IjkwOCIsImlkZW50aWZpZXIiOiJBVEEtQkFUQ0g1In19.s_PiTJUdHvnEbUYONwF9t8tS9wiw4VqeYW9rAULC038"}}
-[2020-04-17 14:49:36,997] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:58} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/auth/?", "request": {"client_key": "908", "client_secret": "abc", "status": "status"}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
-[2020-04-17 14:49:48,128] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:58} WARNING-REQUEST_LOG	{"method": "GET", "code": "405 METHOD NOT ALLOWED", "uri": "/auth/refresh?", "request": {}, "response": {"message": "The method is not allowed for the requested URL."}}
-[2020-04-17 17:31:04,898] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:70} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/ip?", "request": {}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
-[2020-04-17 17:32:54,211] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /weather/ip [GET]
+  File "/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/seller/resources.py", line 42, in post
+    args['postal_code'], args['city_type'], args['street'], args['phone'], args['bank_account'])
+TypeError: __init__() missing 1 required positional argument: 'client_id'
+[2020-05-03 22:52:25,240] {/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/__init__.py:85} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/seller/profile?", "request": {"name": "bagasgas", "email": "bagas@gmail.com", "province": "jawa tengah", "city": "cilacap", "postal_code": "63432", "city_type": "city", "street": "jalan pahlawan", "phone": "12345678", "bod": "1996-06-04"}, "response": {"message": "Internal Server Error"}}
+[2020-05-03 22:52:32,866] {/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /seller/profile [POST]
 Traceback (most recent call last):
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
     resp = resource(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask/views.py", line 89, in view
     return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+  File "/home/alta16/Documents/VirtualEnv/ecommerce/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
     resp = meth(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 108, in wrapper
+  File "/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/__init__.py", line 48, in wrapper
     return fn(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/weathers/resources.py", line 19, in get
-    geo = rq.json()
-UnboundLocalError: local variable 'rq' referenced before assignment
-[2020-04-17 17:32:54,214] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:70} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/weather/ip?ip=112.140.165.156", "request": {"ip": "112.140.165.156"}, "response": {"message": "Internal Server Error"}}
-[2020-04-17 17:33:19,703] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /weather/ip [GET]
-Traceback (most recent call last):
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 108, in wrapper
-    return fn(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/weathers/resources.py", line 18, in get
-    rq = requests.get(self.wio_host + '/ip', params={'ip': args['ip'], 'key': self.wio_apikey})
-AttributeError: 'PublicGetCurrentWeather' object has no attribute 'wio_host'
-[2020-04-17 17:33:19,705] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:70} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/weather/ip?ip=112.140.165.156", "request": {"ip": "112.140.165.156"}, "response": {"message": "Internal Server Error"}}
-[2020-04-17 17:36:05,928] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /auth [GET]
-Traceback (most recent call last):
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/auth/__init__.py", line 22, in get
-    if query is not None:
-NameError: name 'query' is not defined
-[2020-04-17 17:36:05,931] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:70} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/auth?client_key=internal&client_secret=th1s1s1nt3n4lcl13nt", "request": null, "response": {"message": "Internal Server Error"}}
-[2020-04-17 17:36:32,966] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /auth [GET]
-Traceback (most recent call last):
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/auth/__init__.py", line 37, in get
-    token = create_access_token(identify=args['client_key'], user_claims=qry)
-TypeError: create_access_token() got an unexpected keyword argument 'identify'
-[2020-04-17 17:36:32,969] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:70} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/auth?client_key=internal&client_secret=th1s1s1nt3n4lcl13nt", "request": null, "response": {"message": "Internal Server Error"}}
-[2020-04-17 17:38:17,542] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:63} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/auth?client_key=internal&client_secret=th1s1s1nt3n4lcl13nt", "request": null, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODcxMTk4OTcsIm5iZiI6MTU4NzExOTg5NywianRpIjoiZTdjYTZmMjItYjM5Ny00OTdjLTg5OTYtMjM3ZTAzNWMxZWU0IiwiZXhwIjoxNTg3MjA2Mjk3LCJpZGVudGl0eSI6ImludGVybmFsIiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIiwidXNlcl9jbGFpbXMiOnsiaWRlbnRpZmllciI6ImFsdGEgYmF0Y2ggNSIsInN0YXR1cyI6dHJ1ZX19.CrL75IUbUfIzuUDipSMLpOx9zQS9n_OI1caOPqOnJ6E"}}
-[2020-04-17 17:38:39,583] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /weather/ip [GET]
-Traceback (most recent call last):
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 108, in wrapper
-    return fn(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/weathers/resources.py", line 30, in get
-    'city': geo['city'],
-KeyError: 'city'
-[2020-04-17 17:38:39,589] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:70} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/weather/ip?ip=112.140.165.156", "request": {"ip": "112.140.165.156"}, "response": {"message": "Internal Server Error"}}
-[2020-04-17 17:40:32,700] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /weather/ip [GET]
-Traceback (most recent call last):
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "/home/alta16/.local/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 108, in wrapper
-    return fn(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/weathers/resources.py", line 31, in get
-    'organization': geo['organization'],
-KeyError: 'organization'
-[2020-04-17 17:40:32,706] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:70} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/weather/ip?ip=112.140.165.156", "request": {"ip": "112.140.165.156"}, "response": {"message": "Internal Server Error"}}
-[2020-04-17 17:42:04,884] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:63} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/weather/ip?ip=112.140.165.156", "request": {"ip": "112.140.165.156"}, "response": {"country": "Indonesia", "current_weather": {"date": "2020-04-17:09", "temp": 32}}}
-[2020-04-17 17:46:52,245] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:63} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/auth?client_key=internal&client_secret=th1s1s1nt3n4lcl13nt", "request": null, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODcxMjA0MTIsIm5iZiI6MTU4NzEyMDQxMiwianRpIjoiNTM0NGNlZTAtOTI3OC00YzQ1LTkzNzktY2NiNDI2MWJiM2RjIiwiZXhwIjoxNTg3MjA2ODEyLCJpZGVudGl0eSI6ImludGVybmFsIiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIiwidXNlcl9jbGFpbXMiOnsiaWRlbnRpZmllciI6ImFsdGEgYmF0Y2ggNSIsInN0YXR1cyI6dHJ1ZX19.rM5bH7i8zEg7A4-ue81y_jjuEUiR9UGFpKJOm80EF70"}}
-[2020-04-17 17:47:07,595] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:63} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/weather/ip?ip=112.140.165.156", "request": {"ip": "112.140.165.156"}, "response": {"country": "Indonesia", "current_weather": {"date": "2020-04-17:09", "temp": 32}}}
-[2020-04-19 12:43:17,715] {/home/alta16/Documents/VirtualEnv/virtualbaru/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /weather/ip [GET]
-Traceback (most recent call last):
-  File "/home/alta16/Documents/VirtualEnv/virtualbaru/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta16/Documents/VirtualEnv/virtualbaru/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/Documents/VirtualEnv/virtualbaru/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/virtualbaru/lib/python3.6/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/virtualbaru/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/virtualbaru/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 107, in wrapper
-    verify_jwt_in_request()
-  File "/home/alta16/Documents/VirtualEnv/virtualbaru/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 32, in verify_jwt_in_request
-    jwt_data, jwt_header = _decode_jwt_from_request(request_type='access')
-  File "/home/alta16/Documents/VirtualEnv/virtualbaru/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 294, in _decode_jwt_from_request
-    decoded_token = decode_token(encoded_token, csrf_token)
-  File "/home/alta16/Documents/VirtualEnv/virtualbaru/lib/python3.6/site-packages/flask_jwt_extended/utils.py", line 118, in decode_token
-    allow_expired=allow_expired
-  File "/home/alta16/Documents/VirtualEnv/virtualbaru/lib/python3.6/site-packages/flask_jwt_extended/tokens.py", line 140, in decode_jwt
-    leeway=leeway, options=options, issuer=issuer)
-  File "/home/alta16/Documents/VirtualEnv/virtualbaru/lib/python3.6/site-packages/jwt/api_jwt.py", line 104, in decode
-    self._validate_claims(payload, merged_options, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/virtualbaru/lib/python3.6/site-packages/jwt/api_jwt.py", line 134, in _validate_claims
-    self._validate_exp(payload, now, leeway)
-  File "/home/alta16/Documents/VirtualEnv/virtualbaru/lib/python3.6/site-packages/jwt/api_jwt.py", line 175, in _validate_exp
-    raise ExpiredSignatureError('Signature has expired')
-jwt.exceptions.ExpiredSignatureError: Signature has expired
-[2020-04-19 12:43:17,719] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:70} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/weather/ip?ip=112.140.165.156", "request": {"ip": "112.140.165.156"}, "response": {"message": "Internal Server Error"}}
-[2020-04-19 12:43:28,889] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:63} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/auth?client_key=internal&client_secret=th1s1s1nt3n4lcl13nt", "request": null, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODcyNzUwMDgsIm5iZiI6MTU4NzI3NTAwOCwianRpIjoiOGY4MzAyYWItNTY1Ny00NDJlLTk5MmQtMWY0YTNhYjIwNTQ4IiwiZXhwIjoxNTg3MzYxNDA4LCJpZGVudGl0eSI6ImludGVybmFsIiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIiwidXNlcl9jbGFpbXMiOnsiaWRlbnRpZmllciI6ImFsdGEgYmF0Y2ggNSIsInN0YXR1cyI6dHJ1ZX19.BSmj4lMy6o4j2NmehT-XiuCJK3lIuBDoPhCZ42i1cXo"}}
-[2020-04-19 12:43:50,348] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:63} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/weather/ip?ip=112.140.165.156", "request": {"ip": "112.140.165.156"}, "response": {"country": "Indonesia", "current_weather": {"date": "2020-04-19:05", "temp": 33}}}
-[2020-04-19 13:07:19,736] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:63} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/weather/ip?ip=112.140.165.156", "request": {"ip": "112.140.165.156"}, "response": {"country": "Indonesia", "current_weather": {"date": "2020-04-19:05", "temp": 33}}}
-[2020-04-19 13:17:58,198] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:63} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/weather/ip?ip=112.140.165.156", "request": {"ip": "112.140.165.156"}, "response": {"country": "Indonesia", "current_weather": {"date": "2020-04-19:05", "temp": 33}}}
-[2020-04-19 13:18:10,077] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:63} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/weather/ip?ip=112.140.165.157", "request": {"ip": "112.140.165.157"}, "response": {"country": "Indonesia", "current_weather": {"date": "2020-04-19:05", "temp": 33}}}
-[2020-04-19 13:18:21,547] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:63} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/weather/ip?ip=122.140.165.157", "request": {"ip": "122.140.165.157"}, "response": {"country": "China", "current_weather": {"date": "2020-04-19:06", "temp": 19.1}}}
-[2020-04-20 13:05:23,864] {/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /client [POST]
-Traceback (most recent call last):
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py", line 16, in wrapper
-    verify_jwt_in_request()
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 32, in verify_jwt_in_request
-    jwt_data, jwt_header = _decode_jwt_from_request(request_type='access')
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 314, in _decode_jwt_from_request
-    raise NoAuthorizationError(errors[0])
-flask_jwt_extended.exceptions.NoAuthorizationError: Missing Authorization Header
-[2020-04-20 13:05:23,867] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:70} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/client?", "request": {"client_id": 1234, "client_key": "CLIENT01", "client_secret": "SECRET01", "status": true}, "response": {"message": "Internal Server Error"}}
-[2020-04-20 13:06:30,312] {/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /client [POST]
-Traceback (most recent call last):
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py", line 16, in wrapper
-    verify_jwt_in_request()
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 32, in verify_jwt_in_request
-    jwt_data, jwt_header = _decode_jwt_from_request(request_type='access')
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 314, in _decode_jwt_from_request
-    raise NoAuthorizationError(errors[0])
-flask_jwt_extended.exceptions.NoAuthorizationError: Missing Authorization Header
-[2020-04-20 13:06:30,313] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:70} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/client?", "request": {"client_key": "internal", "client_secret": "th1s1s1nt3n4lcl13nt", "status": "true"}, "response": {"message": "Internal Server Error"}}
-[2020-04-20 13:06:32,381] {/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /client [POST]
-Traceback (most recent call last):
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py", line 16, in wrapper
-    verify_jwt_in_request()
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 32, in verify_jwt_in_request
-    jwt_data, jwt_header = _decode_jwt_from_request(request_type='access')
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 314, in _decode_jwt_from_request
-    raise NoAuthorizationError(errors[0])
-flask_jwt_extended.exceptions.NoAuthorizationError: Missing Authorization Header
-[2020-04-20 13:06:32,382] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:70} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/client?", "request": {"client_key": "internal", "client_secret": "th1s1s1nt3n4lcl13nt", "status": "true"}, "response": {"message": "Internal Server Error"}}
-[2020-04-20 13:07:41,691] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:63} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/client?", "request": {"client_key": "internal", "client_secret": "th1s1s1nt3n4lcl13nt", "status": "true"}, "response": {"id": 4, "client_key": "internal", "client_secret": "1447fcbe065d8c90b5236379fb0201b4d16b94b579f3cb0da4f7e41990d9c4e800edf61a26dab2b7fb32e8a6de14e611df5b278c83417c902db54895fff46a82", "status": "true", "created_at": "2020-04-20 13:07:41", "updated_at": null}}
-[2020-04-20 14:19:13,033] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:63} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/client?", "request": {"client_key": "shofi", "client_secret": "rahasia", "status": "true"}, "response": {"id": 5, "client_key": "shofi", "client_secret": "ba93b4419b674f890d41ff78aee94c9bc13659f7651851f790d152b1a24b8ecd20a7797853f94630d2464f6511fe0ed09848e0dd2157d11e8fc63b1e7c319a26", "status": "true", "created_at": "2020-04-20 14:19:13", "updated_at": null}}
-[2020-04-20 14:30:35,479] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:63} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/client?", "request": {"client_key": "kunci", "client_secret": "bukan rahasia", "status": "true"}, "response": {"id": 6, "client_key": "kunci", "client_secret": "ca9c2f9f7d683337e3b05a818ad2adddb1a80757240e838f7252368286d9a0eb0e202843d80e0258652a24506fcc0863807276cac9c8f083da0eb2ac790f585e", "status": "true", "created_at": "2020-04-20 14:30:35", "updated_at": null}}
-[2020-04-20 18:19:39,201] {/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /weather/ip [GET]
-Traceback (most recent call last):
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 107, in wrapper
-    verify_jwt_in_request()
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 32, in verify_jwt_in_request
-    jwt_data, jwt_header = _decode_jwt_from_request(request_type='access')
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 314, in _decode_jwt_from_request
-    raise NoAuthorizationError(errors[0])
-flask_jwt_extended.exceptions.NoAuthorizationError: Missing Authorization Header
-[2020-04-20 18:19:39,204] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:72} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/weather/ip?ip=%20182.1.82.218", "request": null, "response": {"message": "Internal Server Error"}}
-[2020-04-20 18:20:28,632] {/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /weather/ip [GET]
-Traceback (most recent call last):
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/weathers/resources.py", line 23, in get
-    lat = geo['latitude']
-KeyError: 'latitude'
-[2020-04-20 18:20:28,636] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:72} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/weather/ip?ip=%20182.1.82.218", "request": null, "response": {"message": "Internal Server Error"}}
-[2020-04-20 18:22:31,745] {/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /weather/ip [GET]
-Traceback (most recent call last):
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/weathers/resources.py", line 23, in get
-    lon = geo['longitude']
-KeyError: 'longitude'
-[2020-04-20 18:22:31,750] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:72} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/weather/ip?ip=%20182.1.82.218", "request": null, "response": {"message": "Internal Server Error"}}
-[2020-04-20 18:24:37,393] {/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /weather/ip [GET]
-Traceback (most recent call last):
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/weathers/resources.py", line 23, in get
-    lon = geo['longitude']
-KeyError: 'longitude'
-[2020-04-20 18:24:37,395] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:72} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/weather/ip?ip=%20182.1.82.218", "request": null, "response": {"message": "Internal Server Error"}}
-[2020-04-20 18:24:41,074] {/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /weather/ip [GET]
-Traceback (most recent call last):
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/weathers/resources.py", line 23, in get
-    lon = geo['longitude']
-KeyError: 'longitude'
-[2020-04-20 18:24:41,075] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:72} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/weather/ip?ip=%20182.1.82.218", "request": null, "response": {"message": "Internal Server Error"}}
-[2020-04-20 18:24:51,113] {/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /weather/ip [GET]
-Traceback (most recent call last):
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/weathers/resources.py", line 23, in get
-    lon = geo['longitude']
-KeyError: 'longitude'
-[2020-04-20 18:24:51,116] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:72} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/weather/ip?ip=%20182.1.82.218", "request": null, "response": {"message": "Internal Server Error"}}
-[2020-04-20 18:25:51,324] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:65} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/weather/ip?ip=134.201.250.155", "request": null, "response": {"country": "United States", "current_weather": {"date": "2020-04-20:11", "temp": 15}}}
-[2020-04-22 18:19:44,259] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:59} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/client?", "request": {"client_key": "internal", "client_secret": "th1s1s1nt3n4lcl13nt", "status": "true"}, "response": {"id": 3, "client_key": "internal", "client_secret": "c9aa1937288e423f83c60e518dcd4a8da45c301d46a2fb8ad92f46637f328252c46f2f063cbf924760fb4b03b05950f97e2735593bf5d976884ec0681f45a285", "status": "true", "created_at": "2020-04-22 18:19:44", "updated_at": null}}
-[2020-04-22 18:23:24,107] {/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /client [GET]
-Traceback (most recent call last):
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py", line 16, in wrapper
-    verify_jwt_in_request()
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 32, in verify_jwt_in_request
-    jwt_data, jwt_header = _decode_jwt_from_request(request_type='access')
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 314, in _decode_jwt_from_request
-    raise NoAuthorizationError(errors[0])
-flask_jwt_extended.exceptions.NoAuthorizationError: Missing Authorization Header
-[2020-04-22 18:23:24,109] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:66} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/client?p=1&rp=20", "request": null, "response": {"message": "Internal Server Error"}}
-[2020-04-22 18:23:51,390] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:59} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/auth?client_key=internal&client_secret=th1s1s1nt3n4lcl13nt", "request": null, "response": null}
-[2020-04-22 18:24:36,152] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:66} WARNING-REQUEST_LOG	{"method": "POST", "code": "405 METHOD NOT ALLOWED", "uri": "/auth?client_key=internal&client_secret=th1s1s1nt3n4lcl13nt", "request": null, "response": {"message": "The method is not allowed for the requested URL."}}
-[2020-04-22 18:25:03,914] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:59} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/auth?client_key=internal&client_secret=th1s1s1nt3n4lcl13nt", "request": null, "response": null}
-[2020-04-22 18:26:38,393] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:59} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/client?", "request": {"client_key": "internal", "client_secret": "th1s1s1nt3n4lcl13nt", "status": "false"}, "response": {"id": 4, "client_key": "internal", "client_secret": "6191b25b95c2476033528476e2dc5a3b06d7f1d43929b381bb1deb4b1d14ca3aea6db60775dc6ef1064484a9d8c2d94b8f66a46d3febdcefe837346a8d080ec9", "status": "false", "created_at": "2020-04-22 18:26:38", "updated_at": null}}
-[2020-04-22 18:28:19,045] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:59} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/client?", "request": {"client_key": "internal", "client_secret": "th1s1s1nt3n4lcl13nt", "status": "False"}, "response": {"id": 5, "client_key": "internal", "client_secret": "c7ff8410c4f7544d726be9aceb029c1e480ff26203da99e33fd1d207bb7f958e76a45c2eab73a5debff3d893b11aee97a47b746ebab42644afb09125ae71242f", "status": "False", "created_at": "2020-04-22 18:28:19", "updated_at": null}}
-[2020-04-22 18:30:56,222] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:66} WARNING-REQUEST_LOG	{"method": "POST", "code": "405 METHOD NOT ALLOWED", "uri": "/auth?client_key=internal&client_secret=th1s1s1nt3n4lcl13nt", "request": null, "response": {"message": "The method is not allowed for the requested URL."}}
-[2020-04-22 18:31:05,680] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:59} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/auth?client_key=internal&client_secret=th1s1s1nt3n4lcl13nt", "request": null, "response": null}
-[2020-04-22 18:35:41,366] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:59} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/auth?client_key=internal&client_secret=th1s1s1nt3n4lcl13nt", "request": null, "response": null}
-[2020-04-22 18:35:53,380] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:59} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/auth?client_key=internal&client_secret=th1s1s1nt3n4lcl13nt", "request": null, "response": null}
-[2020-04-22 18:37:20,796] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:66} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/auth?client_key=internal&client_secret=th1s1s1nt3n4lcl13nt", "request": null, "response": {"status": "UNAUTHORIZED", "message": "invalid key or secret"}}
-[2020-04-22 18:38:48,749] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:59} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/client?", "request": {"client_key": "internal1", "client_secret": "rahasia", "status": "True"}, "response": {"id": 6, "client_key": "internal1", "client_secret": "fcb3fd943dc084741e6975926d3b101893b22e10e75bf30647719d7f1032843ce5f95ea7a73f128646b4207cfa7790e5d353738fd1d5acd8e847266418c22930", "status": "True", "created_at": "2020-04-22 18:38:48", "updated_at": null}}
-[2020-04-22 18:39:03,702] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:66} WARNING-REQUEST_LOG	{"method": "POST", "code": "405 METHOD NOT ALLOWED", "uri": "/auth?client_key=internal1&client_secret=rahasia", "request": null, "response": {"message": "The method is not allowed for the requested URL."}}
-[2020-04-22 18:39:12,887] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:59} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/auth?client_key=internal1&client_secret=rahasia", "request": null, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODc1NTU1NTIsIm5iZiI6MTU4NzU1NTU1MiwianRpIjoiZjA5NWE5YTQtNmZhNC00Y2JjLTg5ZGEtZDQwODc1OTc5OTkzIiwiZXhwIjoxNTg3NjQxOTUyLCJpZGVudGl0eSI6ImludGVybmFsMSIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7ImNsaWVudF9rZXkiOiJpbnRlcm5hbDEiLCJzdGF0dXMiOiJUcnVlIn19.aNmZ2vtPUqsXEm2HQrjIO-6daRJZso0n0kHHpvSQ7v8"}}
-[2020-04-27 15:57:51,481] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:66} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/auth?client_key=internal&client_secret=th1s1s1nt3n4lcl13nt", "request": null, "response": {"status": "UNAUTHORIZED", "message": "invalid key or secret"}}
-[2020-04-27 15:57:59,147] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:66} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/auth?client_key=internal1&client_secret=rahasia", "request": null, "response": {"status": "UNAUTHORIZED", "message": "invalid key or secret"}}
-[2020-04-27 15:59:38,365] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:66} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/auth?client_key=internal1&client_secret=rahasia", "request": null, "response": {"status": "UNAUTHORIZED", "message": "invalid key or secret"}}
-[2020-04-27 16:00:05,776] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:66} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/auth?client_key=internal1&client_secret=rahasia", "request": null, "response": {"status": "UNAUTHORIZED", "message": "invalid key or secret"}}
-[2020-04-27 16:00:57,223] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:66} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/auth?client_key=internal&client_secret=th1s1s1nt3n4lcl13nt", "request": null, "response": {"status": "UNAUTHORIZED", "message": "invalid key or secret"}}
-[2020-04-27 16:01:01,831] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:59} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/client?", "request": {"client_key": "internal1", "client_secret": "rahasia", "status": "True"}, "response": {"id": 3, "client_key": "internal1", "client_secret": "10b6f7a097ff197365e5862fa1a1e478183ff5695d502db92b66b7151c356bd67c722cfa26dbec0616208481ccd44be213e1f2291c97f68972dec952096c4ccc", "status": "True", "created_at": "2020-04-27 16:01:01", "updated_at": null}}
-[2020-04-27 16:01:11,253] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:66} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/auth?client_key=internal&client_secret=th1s1s1nt3n4lcl13nt", "request": null, "response": {"status": "UNAUTHORIZED", "message": "invalid key or secret"}}
-[2020-04-27 16:01:14,273] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:59} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/auth?client_key=internal1&client_secret=rahasia", "request": null, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODc5NzgwNzQsIm5iZiI6MTU4Nzk3ODA3NCwianRpIjoiNTcyMWIzZmItNjkzMi00OGZkLWI2MmUtYzIzMDcxMGVhMGIwIiwiZXhwIjoxNTg4MDY0NDc0LCJpZGVudGl0eSI6ImludGVybmFsMSIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7ImlkIjozLCJjbGllbnRfa2V5IjoiaW50ZXJuYWwxIiwic3RhdHVzIjoiVHJ1ZSJ9fQ.Tq-QxZTBA7QCDobGf7A0Dj5-nNxRAud1ZGoNZlw1GRM"}}
-[2020-04-27 16:01:30,010] {/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /client/2 [GET]
-Traceback (most recent call last):
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py", line 16, in wrapper
-    verify_jwt_in_request()
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 32, in verify_jwt_in_request
-    jwt_data, jwt_header = _decode_jwt_from_request(request_type='access')
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 294, in _decode_jwt_from_request
-    decoded_token = decode_token(encoded_token, csrf_token)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/utils.py", line 118, in decode_token
-    allow_expired=allow_expired
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/tokens.py", line 140, in decode_jwt
-    leeway=leeway, options=options, issuer=issuer)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/jwt/api_jwt.py", line 92, in decode
-    jwt, key=key, algorithms=algorithms, options=options, **kwargs
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/jwt/api_jws.py", line 156, in decode
-    key, algorithms)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/jwt/api_jws.py", line 223, in _verify_signature
-    raise InvalidSignatureError('Signature verification failed')
-jwt.exceptions.InvalidSignatureError: Signature verification failed
-[2020-04-27 16:01:30,018] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:66} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/client/2?", "request": null, "response": {"message": "Internal Server Error"}}
-[2020-04-27 16:01:43,214] {/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /client/2 [GET]
-Traceback (most recent call last):
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py", line 16, in wrapper
-    verify_jwt_in_request()
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 32, in verify_jwt_in_request
-    jwt_data, jwt_header = _decode_jwt_from_request(request_type='access')
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 294, in _decode_jwt_from_request
-    decoded_token = decode_token(encoded_token, csrf_token)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/utils.py", line 118, in decode_token
-    allow_expired=allow_expired
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/tokens.py", line 140, in decode_jwt
-    leeway=leeway, options=options, issuer=issuer)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/jwt/api_jwt.py", line 92, in decode
-    jwt, key=key, algorithms=algorithms, options=options, **kwargs
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/jwt/api_jws.py", line 156, in decode
-    key, algorithms)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/jwt/api_jws.py", line 223, in _verify_signature
-    raise InvalidSignatureError('Signature verification failed')
-jwt.exceptions.InvalidSignatureError: Signature verification failed
-[2020-04-27 16:01:43,215] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:66} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/client/2?", "request": null, "response": {"message": "Internal Server Error"}}
-[2020-04-27 16:02:16,224] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:59} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/client/2?", "request": null, "response": {"id": 2, "client_key": "noninternal", "client_secret": "46b1f4c931efb7a18862a745a7e76e1ebdc5794754a91892683bdc217ecda7cefd41d4346b792a3013959df7050c058eb6f930bd3f4518aa49ea35309df24477", "status": "False", "created_at": "2020-04-27 15:55:59", "updated_at": null}}
-[2020-04-27 16:02:28,730] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:59} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/client?p=1&rp=20", "request": null, "response": [{"id": 1, "client_key": "internal", "client_secret": "46b1f4c931efb7a18862a745a7e76e1ebdc5794754a91892683bdc217ecda7cefd41d4346b792a3013959df7050c058eb6f930bd3f4518aa49ea35309df24477", "status": "True", "created_at": "2020-04-27 15:55:59", "updated_at": null}, {"id": 2, "client_key": "noninternal", "client_secret": "46b1f4c931efb7a18862a745a7e76e1ebdc5794754a91892683bdc217ecda7cefd41d4346b792a3013959df7050c058eb6f930bd3f4518aa49ea35309df24477", "status": "False", "created_at": "2020-04-27 15:55:59", "updated_at": null}, {"id": 3, "client_key": "internal1", "client_secret": "10b6f7a097ff197365e5862fa1a1e478183ff5695d502db92b66b7151c356bd67c722cfa26dbec0616208481ccd44be213e1f2291c97f68972dec952096c4ccc", "status": "True", "created_at": "2020-04-27 16:01:01", "updated_at": null}]}
-[2020-04-27 16:02:42,033] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:59} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/user/1?", "request": null, "response": {"id": 1, "name": "shofi", "age": 25, "sex": "female", "client_id": 1}}
-[2020-04-27 16:02:52,637] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:59} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/user?p=1&rp=2", "request": null, "response": [{"id": 1, "name": "shofi", "age": 25, "sex": "female", "client_id": 1}]}
-[2020-04-27 16:04:27,554] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:66} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/book/3?", "request": null, "response": {"status": "NOT_FOUND"}}
-[2020-04-27 16:04:37,372] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:66} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/book/4?", "request": null, "response": {"status": "NOT_FOUND"}}
-[2020-04-27 16:05:08,143] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:59} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/book/1?", "request": null, "response": {"id": 1, "title": "shofiya", "isbn": "123-456", "writer": "tere liye"}}
-[2020-04-27 16:05:55,614] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:59} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/user/1?", "request": null, "response": {"id": 1, "name": "shofi", "age": 25, "sex": "female", "client_id": 1}}
-[2020-04-27 16:07:27,839] {/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /user/1 [GET]
-Traceback (most recent call last):
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py", line 16, in wrapper
-    verify_jwt_in_request()
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 32, in verify_jwt_in_request
-    jwt_data, jwt_header = _decode_jwt_from_request(request_type='access')
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 314, in _decode_jwt_from_request
-    raise NoAuthorizationError(errors[0])
-flask_jwt_extended.exceptions.NoAuthorizationError: Missing Authorization Header
-[2020-04-27 16:07:27,840] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:66} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/user/1?", "request": null, "response": {"message": "Internal Server Error"}}
-[2020-04-27 16:07:34,168] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:59} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/user/1?", "request": null, "response": {"id": 1, "name": "shofi", "age": 25, "sex": "female", "client_id": 1}}
-[2020-04-27 16:08:02,373] {/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /rent/1 [GET]
-Traceback (most recent call last):
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 107, in wrapper
-    verify_jwt_in_request()
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 32, in verify_jwt_in_request
-    jwt_data, jwt_header = _decode_jwt_from_request(request_type='access')
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 314, in _decode_jwt_from_request
-    raise NoAuthorizationError(errors[0])
-flask_jwt_extended.exceptions.NoAuthorizationError: Missing Authorization Header
-[2020-04-27 16:08:02,374] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:66} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/rent/1?", "request": null, "response": {"message": "Internal Server Error"}}
-[2020-04-27 16:08:30,209] {/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /client/2 [GET]
-Traceback (most recent call last):
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py", line 16, in wrapper
-    verify_jwt_in_request()
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 32, in verify_jwt_in_request
-    jwt_data, jwt_header = _decode_jwt_from_request(request_type='access')
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 314, in _decode_jwt_from_request
-    raise NoAuthorizationError(errors[0])
-flask_jwt_extended.exceptions.NoAuthorizationError: Missing Authorization Header
-[2020-04-27 16:08:30,210] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:66} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/client/2?", "request": null, "response": {"message": "Internal Server Error"}}
-[2020-04-27 16:08:35,356] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:59} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/client/2?", "request": null, "response": {"id": 2, "client_key": "noninternal", "client_secret": "46b1f4c931efb7a18862a745a7e76e1ebdc5794754a91892683bdc217ecda7cefd41d4346b792a3013959df7050c058eb6f930bd3f4518aa49ea35309df24477", "status": "False", "created_at": "2020-04-27 15:55:59", "updated_at": null}}
-[2020-04-27 16:08:54,048] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:59} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/user?p=1&rp=2", "request": null, "response": [{"id": 1, "name": "shofi", "age": 25, "sex": "female", "client_id": 1}]}
-[2020-04-27 16:09:09,987] {/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /user [GET]
-Traceback (most recent call last):
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py", line 16, in wrapper
-    verify_jwt_in_request()
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 32, in verify_jwt_in_request
-    jwt_data, jwt_header = _decode_jwt_from_request(request_type='access')
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 314, in _decode_jwt_from_request
-    raise NoAuthorizationError(errors[0])
-flask_jwt_extended.exceptions.NoAuthorizationError: Missing Authorization Header
-[2020-04-27 16:09:09,988] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:66} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/user?p=1&rp=2", "request": null, "response": {"message": "Internal Server Error"}}
-[2020-04-27 16:09:29,278] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:59} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/user?p=1&rp=2", "request": null, "response": [{"id": 1, "name": "shofi", "age": 25, "sex": "female", "client_id": 1}]}
-[2020-04-27 16:10:19,606] {/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book [POST]
-Traceback (most recent call last):
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py", line 16, in wrapper
-    verify_jwt_in_request()
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 32, in verify_jwt_in_request
-    jwt_data, jwt_header = _decode_jwt_from_request(request_type='access')
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 314, in _decode_jwt_from_request
-    raise NoAuthorizationError(errors[0])
-flask_jwt_extended.exceptions.NoAuthorizationError: Missing Authorization Header
-[2020-04-27 16:10:19,607] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:66} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/book?", "request": {"title": "Shofi", "isbn": "1-5678-9101112-14", "writer": "ShofiyaAna"}, "response": {"message": "Internal Server Error"}}
-[2020-04-27 16:10:30,277] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:59} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/book?", "request": {"title": "Shofi", "isbn": "1-5678-9101112-14", "writer": "ShofiyaAna"}, "response": {"id": 2, "title": "Shofi", "isbn": "1-5678-9101112-14", "writer": "ShofiyaAna"}}
-[2020-04-27 16:12:19,317] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:59} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/client?", "request": {"client_key": "moli", "client_secret": "rahasiamoli", "status": "False"}, "response": {"id": 4, "client_key": "moli", "client_secret": "d37b254cbc34ab1ee73205c204a8d654aa1c1a88a62b73a803da32cacb1b6770d304f239c7c6717a28b6b518e69ba1a2e936d5762c9b9829cc603f1afc35f082", "status": "False", "created_at": "2020-04-27 16:12:19", "updated_at": null}}
-[2020-04-27 16:13:19,622] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:59} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/auth?client_key=moli&client_secret=rahasiamoli", "request": null, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODc5Nzg3OTksIm5iZiI6MTU4Nzk3ODc5OSwianRpIjoiNTU0ZDlkZDctZTJmYi00Zjc4LWIyNDgtNzgzNTIyOWM0MjJmIiwiZXhwIjoxNTg4MDY1MTk5LCJpZGVudGl0eSI6Im1vbGkiLCJmcmVzaCI6ZmFsc2UsInR5cGUiOiJhY2Nlc3MiLCJ1c2VyX2NsYWltcyI6eyJpZCI6NCwiY2xpZW50X2tleSI6Im1vbGkiLCJzdGF0dXMiOiJGYWxzZSJ9fQ.9hZQTV75Ubnm9baQFwv4h9Sz5ODb0rtyoAWB23JcPuI"}}
-[2020-04-27 16:14:28,438] {/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /client/2 [GET]
-Traceback (most recent call last):
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/jwt/api_jws.py", line 186, in _load
-    header_data = base64url_decode(header_segment)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/jwt/utils.py", line 42, in base64url_decode
-    return base64.urlsafe_b64decode(input)
-  File "/usr/lib/python3.6/base64.py", line 133, in urlsafe_b64decode
-    return b64decode(s)
-  File "/usr/lib/python3.6/base64.py", line 87, in b64decode
-    return binascii.a2b_base64(s)
-binascii.Error: Incorrect padding
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py", line 16, in wrapper
-    verify_jwt_in_request()
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 32, in verify_jwt_in_request
-    jwt_data, jwt_header = _decode_jwt_from_request(request_type='access')
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 294, in _decode_jwt_from_request
-    decoded_token = decode_token(encoded_token, csrf_token)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/flask_jwt_extended/utils.py", line 91, in decode_token
-    encoded_token, verify=False, algorithms=config.decode_algorithms
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/jwt/api_jwt.py", line 84, in decode
-    payload, _, _, _ = self._load(jwt)
-  File "/home/alta16/Documents/VirtualEnv/venv/lib/python3.6/site-packages/jwt/api_jws.py", line 188, in _load
-    raise DecodeError('Invalid header padding')
-jwt.exceptions.DecodeError: Invalid header padding
-[2020-04-27 16:14:28,443] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:66} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/client/2?", "request": null, "response": {"message": "Internal Server Error"}}
-[2020-04-27 16:14:39,188] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:66} WARNING-REQUEST_LOG	{"method": "GET", "code": "403 FORBIDDEN", "uri": "/client/2?", "request": null, "response": {"status": "FORBIDDEN", "message": "Internal Only!"}}
-[2020-04-27 16:14:55,415] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:59} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/client?p=1&rp=20", "request": null, "response": [{"id": 1, "client_key": "internal", "client_secret": "46b1f4c931efb7a18862a745a7e76e1ebdc5794754a91892683bdc217ecda7cefd41d4346b792a3013959df7050c058eb6f930bd3f4518aa49ea35309df24477", "status": "True", "created_at": "2020-04-27 15:55:59", "updated_at": null}, {"id": 2, "client_key": "noninternal", "client_secret": "46b1f4c931efb7a18862a745a7e76e1ebdc5794754a91892683bdc217ecda7cefd41d4346b792a3013959df7050c058eb6f930bd3f4518aa49ea35309df24477", "status": "False", "created_at": "2020-04-27 15:55:59", "updated_at": null}, {"id": 3, "client_key": "internal1", "client_secret": "10b6f7a097ff197365e5862fa1a1e478183ff5695d502db92b66b7151c356bd67c722cfa26dbec0616208481ccd44be213e1f2291c97f68972dec952096c4ccc", "status": "True", "created_at": "2020-04-27 16:01:01", "updated_at": null}, {"id": 4, "client_key": "moli", "client_secret": "d37b254cbc34ab1ee73205c204a8d654aa1c1a88a62b73a803da32cacb1b6770d304f239c7c6717a28b6b518e69ba1a2e936d5762c9b9829cc603f1afc35f082", "status": "False", "created_at": "2020-04-27 16:12:19", "updated_at": null}]}
-[2020-04-27 16:31:59,312] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:66} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/auth?client_key=internal1&client_secret=rahasia", "request": null, "response": {"status": "UNAUTHORIZED", "message": "invalid key or secret"}}
-[2020-04-27 16:32:11,920] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:59} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/client?", "request": {"client_key": "internal1", "client_secret": "rahasia", "status": "True"}, "response": {"id": 3, "client_key": "internal1", "client_secret": "18c00c554a107f75d2d65f7262580acadffbba85fd9deefc99f50d9978999a122dee484da5009b1d327b86cd6e29cd5bb52a055009c94270cc02a03f0c039a54", "status": "True", "created_at": "2020-04-27 16:32:11", "updated_at": null}}
-[2020-04-27 16:32:19,043] {/home/alta16/Documents/project/REST_API_Tugas_5/blueprints/__init__.py:59} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/auth?client_key=internal1&client_secret=rahasia", "request": null, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODc5Nzk5MzksIm5iZiI6MTU4Nzk3OTkzOSwianRpIjoiODgwOTExNmEtNWUxOS00MWJiLTk4M2QtOTBlZjdjZmU0YTNlIiwiZXhwIjoxNTg4MDY2MzM5LCJpZGVudGl0eSI6ImludGVybmFsMSIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7ImlkIjozLCJjbGllbnRfa2V5IjoiaW50ZXJuYWwxIiwic3RhdHVzIjoiVHJ1ZSJ9fQ.mllI3XhbXjcPDWb1IEQIf-Jzk-hNflpYjzyDWzVm8q0"}}
+  File "/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/seller/resources.py", line 42, in post
+    args['postal_code'], args['city_type'], args['street'], args['phone'], args['bank_account'])
+TypeError: __init__() missing 1 required positional argument: 'client_id'
+[2020-05-03 22:52:32,869] {/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/__init__.py:85} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/seller/profile?", "request": {"name": "bagasgas", "email": "bagas@gmail.com", "province": "jawa tengah", "city": "cilacap", "postal_code": "63432", "city_type": "city", "street": "jalan pahlawan", "phone": "12345678", "bod": "1996-06-04"}, "response": {"message": "Internal Server Error"}}
+[2020-05-03 22:53:30,321] {/home/alta16/Documents/Portfolio-E-Commerce/shofiya/blueprints/__init__.py:78} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/seller/profile?", "request": {"name": "bagasgas", "email": "bagas@gmail.com", "province": "jawa tengah", "city": "cilacap", "postal_code": "63432", "city_type": "city", "street": "jalan pahlawan", "phone": "12345678", "bod": "1996-06-04"}, "response": {"id": 1, "client_id": 0, "name": "bagasgas", "email": "bagas@gmail.com", "province": "jawa tengah", "city": "cilacap", "postal_code": "63432", "city_type": "city", "street": "jalan pahlawan", "phone": "12345678", "bank_account": null, "created_at": "Sun, 03 May 2020 22:53:30 -0000", "updated_at": null}}

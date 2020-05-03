@@ -26,7 +26,7 @@ class Clients(db.Model):
         'updated_at':fields.DateTime
     }
 
-    jwt_claims_fields = {
+    jwt_claim_fields = {
         'id': fields.Integer,
         'username': fields.String,
         'status': fields.String

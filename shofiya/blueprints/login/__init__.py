@@ -26,7 +26,7 @@ class CreateTokenResource(Resource):
                        (args['password'], client_salt)).encode('utf-8')
             hash_pass = hashlib.sha512(encoded).hexdigest()
             if hash_pass == qry_client.password and qry_client.username == args['username']:
-                qry_client = marshal(qry_client, Users.jwt_client_fields)
+                qry_client = marshal(qry_client, Clients.jwt_claim_fields)
                 qry_client['identifier'] = "shofiya"
                 token = create_access_token(
                     identity=args['username'], user_claims=qry_client)
