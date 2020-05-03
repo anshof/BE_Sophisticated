@@ -1,0 +1,835 @@
+[2020-04-16 15:31:36,351] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book [POST]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry '450--0010' for key 'isbn'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta16/Documents/project/REST API Tugas 2/blueprints/book/resources.py", line 33, in post
+    db.session.commit()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1036, in commit
+    self.transaction.commit()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 503, in commit
+    self._prepare_impl()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 482, in _prepare_impl
+    self.session.flush()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2496, in flush
+    self._flush(objects)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2637, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    flush_context.execute()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1136, in _emit_insert_statements
+    statement, params
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1103, in _execute_clauseelement
+    distilled_params,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1288, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1482, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.IntegrityError: (pymysql.err.IntegrityError) (1062, "Duplicate entry '450--0010' for key 'isbn'")
+[SQL: INSERT INTO books (title, isbn, writer, updated_at, deleted_at) VALUES (%(title)s, %(isbn)s, %(writer)s, %(updated_at)s, %(deleted_at)s)]
+[parameters: {'title': 'alul', 'isbn': '450--0010', 'writer': 'writer', 'updated_at': None, 'deleted_at': None}]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+[2020-04-16 15:31:36,353] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/book?", "request": {"title": "alul", "isbn": "450--0010", "writer": "writer"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 15:31:46,805] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book [POST]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry '450--0010' for key 'isbn'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta16/Documents/project/REST API Tugas 2/blueprints/book/resources.py", line 33, in post
+    db.session.commit()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1036, in commit
+    self.transaction.commit()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 503, in commit
+    self._prepare_impl()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 482, in _prepare_impl
+    self.session.flush()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2496, in flush
+    self._flush(objects)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2637, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    flush_context.execute()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1136, in _emit_insert_statements
+    statement, params
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1103, in _execute_clauseelement
+    distilled_params,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1288, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1482, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.IntegrityError: (pymysql.err.IntegrityError) (1062, "Duplicate entry '450--0010' for key 'isbn'")
+[SQL: INSERT INTO books (title, isbn, writer, updated_at, deleted_at) VALUES (%(title)s, %(isbn)s, %(writer)s, %(updated_at)s, %(deleted_at)s)]
+[parameters: {'title': 'ifosh', 'isbn': '450--0010', 'writer': 'writer', 'updated_at': None, 'deleted_at': None}]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+[2020-04-16 15:31:46,808] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/book?", "request": {"title": "ifosh", "isbn": "450--0010", "writer": "writer"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 15:32:34,524] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book [POST]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry 'writer' for key 'writer'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta16/Documents/project/REST API Tugas 2/blueprints/book/resources.py", line 33, in post
+    db.session.commit()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1036, in commit
+    self.transaction.commit()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 503, in commit
+    self._prepare_impl()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 482, in _prepare_impl
+    self.session.flush()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2496, in flush
+    self._flush(objects)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2637, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    flush_context.execute()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1136, in _emit_insert_statements
+    statement, params
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1103, in _execute_clauseelement
+    distilled_params,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1288, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1482, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.IntegrityError: (pymysql.err.IntegrityError) (1062, "Duplicate entry 'writer' for key 'writer'")
+[SQL: INSERT INTO books (title, isbn, writer, updated_at, deleted_at) VALUES (%(title)s, %(isbn)s, %(writer)s, %(updated_at)s, %(deleted_at)s)]
+[parameters: {'title': 'ifosh', 'isbn': '45099810', 'writer': 'writer', 'updated_at': None, 'deleted_at': None}]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+[2020-04-16 15:32:34,527] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/book?", "request": {"title": "ifosh", "isbn": "45099810", "writer": "writer"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 15:32:58,296] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/book?", "request": {"title": "ifosh", "isbn": "450010", "writer": "dududu"}, "response": {"id": 15, "title": "ifosh", "isbn": "450010", "writer": "dududu"}}
+[2020-04-16 15:33:33,286] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/book?", "request": {"title": "anshof", "isbn": "450010", "writer": "dududu"}, "response": {"id": 16, "title": "anshof", "isbn": "450010", "writer": "dududu"}}
+[2020-04-16 15:34:30,188] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book/2 [POST]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: post() got an unexpected keyword argument 'id'
+[2020-04-16 15:34:30,191] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/book/2?", "request": {"title": "ana", "isbn": "450010", "writer": "dududu"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 15:34:40,051] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/book/1?", "request": {"title": "ana", "isbn": "450010", "writer": "dududu"}, "response": {"id": 1, "title": "judul", "isbn": "12345678", "writer": "penulis"}}
+[2020-04-16 15:34:45,428] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/book/10?", "request": {"title": "ana", "isbn": "450010", "writer": "dududu"}, "response": {"id": 10, "title": "aisyah", "isbn": "450--0010", "writer": "writer"}}
+[2020-04-16 15:35:25,703] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "PUT", "code": "200 OK", "uri": "/book/10?", "request": {"title": "kur", "isbn": "450010", "writer": "dududu"}, "response": {"id": 10, "title": "kur", "isbn": "450010", "writer": "dududu"}}
+[2020-04-16 16:21:42,853] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/book?", "request": {"title": "nia", "isbn": "450010", "writer": "dududu"}, "response": {"id": 17, "title": "nia", "isbn": "450010", "writer": "dududu"}}
+[2020-04-16 16:21:50,418] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/book?", "request": {"title": "wati", "isbn": "450010", "writer": "dududu"}, "response": {"id": 18, "title": "wati", "isbn": "450010", "writer": "dududu"}}
+[2020-04-16 16:21:57,810] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/book?", "request": {"title": "alul", "isbn": "450010", "writer": "dududu"}, "response": {"id": 19, "title": "alul", "isbn": "450010", "writer": "dududu"}}
+[2020-04-16 16:22:04,439] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/book?", "request": {"title": "oci", "isbn": "450010", "writer": "dududu"}, "response": {"id": 20, "title": "oci", "isbn": "450010", "writer": "dududu"}}
+[2020-04-16 16:22:13,605] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/book?", "request": {"title": "ros", "isbn": "450010", "writer": "dududu"}, "response": {"id": 21, "title": "ros", "isbn": "450010", "writer": "dududu"}}
+[2020-04-16 16:22:23,605] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/book?", "request": {"title": "liani", "isbn": "450010", "writer": "dududu"}, "response": {"id": 22, "title": "liani", "isbn": "450010", "writer": "dududu"}}
+[2020-04-16 16:22:35,516] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/book?", "request": {"title": "putri", "isbn": "450010", "writer": "dududu"}, "response": {"id": 23, "title": "putri", "isbn": "450010", "writer": "dududu"}}
+[2020-04-16 16:22:43,415] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/book?", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": {"id": 24, "title": "utami", "isbn": "450010", "writer": "dududu"}}
+[2020-04-16 16:30:53,818] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/list?p=1&rp=5&title=judulu&isbn=12345&writer=penulus", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
+[2020-04-16 16:31:30,879] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/list?p=1&rp=5&title=judul&isbn=12345678&writer=penulis", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
+[2020-04-16 16:32:43,868] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/list?p=1&rp=5&title=judul&isbn=12345678&writer=penulis", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
+[2020-04-16 16:32:57,438] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/list?isbn=450010", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
+[2020-04-16 16:33:14,797] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/list?p=1&rp=5", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
+[2020-04-16 16:33:57,963] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/list?p=1&rp=5", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
+[2020-04-16 16:34:01,699] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/list?p=1", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
+[2020-04-16 16:34:24,057] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book/list [GET]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: get() missing 1 required positional argument: 'id'
+[2020-04-16 16:34:24,060] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/book/list?p=1", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 16:35:04,581] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book/list [GET]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: get() missing 1 required positional argument: 'id'
+[2020-04-16 16:35:04,583] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/book/list?p=1&rp=5", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 16:35:09,584] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book/list [GET]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: get() missing 1 required positional argument: 'id'
+[2020-04-16 16:35:09,586] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/book/list?isbn=450010", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 16:35:56,806] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/book/?writer=penulis", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
+[2020-04-16 16:36:02,619] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book [GET]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: get() missing 1 required positional argument: 'id'
+[2020-04-16 16:36:02,620] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/book?", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 16:36:46,802] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book/list [GET]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: get() missing 1 required positional argument: 'id'
+[2020-04-16 16:36:46,803] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/book/list?title=judul", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 16:36:52,412] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book/list [GET]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: get() missing 1 required positional argument: 'id'
+[2020-04-16 16:36:52,413] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/book/list?isbn=450010", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 16:37:07,280] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/list?isbn=450010", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
+[2020-04-16 16:37:19,201] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book/list [GET]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: get() missing 1 required positional argument: 'id'
+[2020-04-16 16:37:19,202] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/book/list?isbn=450010", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 16:38:02,790] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book/list [GET]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: get() missing 1 required positional argument: 'id'
+[2020-04-16 16:38:02,792] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/book/list?orderby=isbn", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 16:41:36,859] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book/list [GET]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: get() missing 1 required positional argument: 'id'
+[2020-04-16 16:41:36,861] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/book/list?orderby=isbn", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 16:41:42,653] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book/list [GET]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: get() missing 1 required positional argument: 'id'
+[2020-04-16 16:41:42,654] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/book/list?p=1&rp=5", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 16:42:06,628] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book/list [GET]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: get() missing 1 required positional argument: 'id'
+[2020-04-16 16:42:06,629] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/book/list?orderby=isbn&sort=desc", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 16:42:48,215] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book/list [GET]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: get() missing 1 required positional argument: 'id'
+[2020-04-16 16:42:48,217] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/book/list?orderby=isbn&sort=desc", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 16:43:00,092] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book/list [GET]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta16/Documents/project/REST API Tugas 2/blueprints/book/resources.py", line 102, in get
+    qry = qry.order_by(desc(Books.isbn))
+NameError: name 'desc' is not defined
+[2020-04-16 16:43:00,094] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/book/list?orderby=isbn&sort=desc", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 16:45:58,907] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/book/list?orderby=isbn", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": [{"id": 1, "title": "judul", "isbn": "12345678", "writer": "penulis"}, {"id": 10, "title": "kur", "isbn": "450010", "writer": "dududu"}, {"id": 15, "title": "ifosh", "isbn": "450010", "writer": "dududu"}, {"id": 16, "title": "anshof", "isbn": "450010", "writer": "dududu"}, {"id": 17, "title": "nia", "isbn": "450010", "writer": "dududu"}, {"id": 18, "title": "wati", "isbn": "450010", "writer": "dududu"}, {"id": 19, "title": "alul", "isbn": "450010", "writer": "dududu"}, {"id": 20, "title": "oci", "isbn": "450010", "writer": "dududu"}, {"id": 21, "title": "ros", "isbn": "450010", "writer": "dududu"}, {"id": 22, "title": "liani", "isbn": "450010", "writer": "dududu"}, {"id": 23, "title": "putri", "isbn": "450010", "writer": "dududu"}, {"id": 24, "title": "utami", "isbn": "450010", "writer": "dududu"}]}
+[2020-04-16 16:47:53,393] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/book/list?orderby=isbn&sort=asc", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": [{"id": 1, "title": "judul", "isbn": "12345678", "writer": "penulis"}, {"id": 10, "title": "kur", "isbn": "450010", "writer": "dududu"}, {"id": 15, "title": "ifosh", "isbn": "450010", "writer": "dududu"}, {"id": 16, "title": "anshof", "isbn": "450010", "writer": "dududu"}, {"id": 17, "title": "nia", "isbn": "450010", "writer": "dududu"}, {"id": 18, "title": "wati", "isbn": "450010", "writer": "dududu"}, {"id": 19, "title": "alul", "isbn": "450010", "writer": "dududu"}, {"id": 20, "title": "oci", "isbn": "450010", "writer": "dududu"}, {"id": 21, "title": "ros", "isbn": "450010", "writer": "dududu"}, {"id": 22, "title": "liani", "isbn": "450010", "writer": "dududu"}, {"id": 23, "title": "putri", "isbn": "450010", "writer": "dududu"}, {"id": 24, "title": "utami", "isbn": "450010", "writer": "dududu"}]}
+[2020-04-16 16:48:04,137] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book/list [GET]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta16/Documents/project/REST API Tugas 2/blueprints/book/resources.py", line 102, in get
+    qry = qry.order_by(desc(Books.isbn))
+NameError: name 'desc' is not defined
+[2020-04-16 16:48:04,139] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/book/list?orderby=isbn&sort=desc", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 16:48:37,764] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/book/list?sort=desc", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": [{"id": 1, "title": "judul", "isbn": "12345678", "writer": "penulis"}, {"id": 10, "title": "kur", "isbn": "450010", "writer": "dududu"}, {"id": 15, "title": "ifosh", "isbn": "450010", "writer": "dududu"}, {"id": 16, "title": "anshof", "isbn": "450010", "writer": "dududu"}, {"id": 17, "title": "nia", "isbn": "450010", "writer": "dududu"}, {"id": 18, "title": "wati", "isbn": "450010", "writer": "dududu"}, {"id": 19, "title": "alul", "isbn": "450010", "writer": "dududu"}, {"id": 20, "title": "oci", "isbn": "450010", "writer": "dududu"}, {"id": 21, "title": "ros", "isbn": "450010", "writer": "dududu"}, {"id": 22, "title": "liani", "isbn": "450010", "writer": "dududu"}, {"id": 23, "title": "putri", "isbn": "450010", "writer": "dududu"}, {"id": 24, "title": "utami", "isbn": "450010", "writer": "dududu"}]}
+[2020-04-16 16:48:53,880] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/book/list?orderby=isbn", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": [{"id": 1, "title": "judul", "isbn": "12345678", "writer": "penulis"}, {"id": 10, "title": "kur", "isbn": "450010", "writer": "dududu"}, {"id": 15, "title": "ifosh", "isbn": "450010", "writer": "dududu"}, {"id": 16, "title": "anshof", "isbn": "450010", "writer": "dududu"}, {"id": 17, "title": "nia", "isbn": "450010", "writer": "dududu"}, {"id": 18, "title": "wati", "isbn": "450010", "writer": "dududu"}, {"id": 19, "title": "alul", "isbn": "450010", "writer": "dududu"}, {"id": 20, "title": "oci", "isbn": "450010", "writer": "dududu"}, {"id": 21, "title": "ros", "isbn": "450010", "writer": "dududu"}, {"id": 22, "title": "liani", "isbn": "450010", "writer": "dududu"}, {"id": 23, "title": "putri", "isbn": "450010", "writer": "dududu"}, {"id": 24, "title": "utami", "isbn": "450010", "writer": "dududu"}]}
+[2020-04-16 16:49:03,013] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book/list [GET]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta16/Documents/project/REST API Tugas 2/blueprints/book/resources.py", line 102, in get
+    qry = qry.order_by(desc(Books.isbn))
+NameError: name 'desc' is not defined
+[2020-04-16 16:49:03,015] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/book/list?orderby=isbn&sort=desc", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 16:49:09,086] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/book/list?orderby=isbn&sort=asc", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": [{"id": 1, "title": "judul", "isbn": "12345678", "writer": "penulis"}, {"id": 10, "title": "kur", "isbn": "450010", "writer": "dududu"}, {"id": 15, "title": "ifosh", "isbn": "450010", "writer": "dududu"}, {"id": 16, "title": "anshof", "isbn": "450010", "writer": "dududu"}, {"id": 17, "title": "nia", "isbn": "450010", "writer": "dududu"}, {"id": 18, "title": "wati", "isbn": "450010", "writer": "dududu"}, {"id": 19, "title": "alul", "isbn": "450010", "writer": "dududu"}, {"id": 20, "title": "oci", "isbn": "450010", "writer": "dududu"}, {"id": 21, "title": "ros", "isbn": "450010", "writer": "dududu"}, {"id": 22, "title": "liani", "isbn": "450010", "writer": "dududu"}, {"id": 23, "title": "putri", "isbn": "450010", "writer": "dududu"}, {"id": 24, "title": "utami", "isbn": "450010", "writer": "dududu"}]}
+[2020-04-16 16:51:26,149] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/book/list?orderby=isbn&sort=asc", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": [{"id": 1, "title": "judul", "isbn": "12345678", "writer": "penulis"}, {"id": 10, "title": "kur", "isbn": "450010", "writer": "dududu"}, {"id": 15, "title": "ifosh", "isbn": "450010", "writer": "dududu"}, {"id": 16, "title": "anshof", "isbn": "450010", "writer": "dududu"}, {"id": 17, "title": "nia", "isbn": "450010", "writer": "dududu"}, {"id": 18, "title": "wati", "isbn": "450010", "writer": "dududu"}, {"id": 19, "title": "alul", "isbn": "450010", "writer": "dududu"}, {"id": 20, "title": "oci", "isbn": "450010", "writer": "dududu"}, {"id": 21, "title": "ros", "isbn": "450010", "writer": "dududu"}, {"id": 22, "title": "liani", "isbn": "450010", "writer": "dududu"}, {"id": 23, "title": "putri", "isbn": "450010", "writer": "dududu"}, {"id": 24, "title": "utami", "isbn": "450010", "writer": "dududu"}]}
+[2020-04-16 16:51:34,926] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book/list [GET]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta16/Documents/project/REST API Tugas 2/blueprints/book/resources.py", line 102, in get
+    qry = qry.order_by(desc(Books.isbn))
+NameError: name 'desc' is not defined
+[2020-04-16 16:51:34,928] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/book/list?orderby=isbn&sort=desc", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 16:52:01,054] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/book/list?orderby=isbn&sort=desc", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": [{"id": 10, "title": "kur", "isbn": "450010", "writer": "dududu"}, {"id": 15, "title": "ifosh", "isbn": "450010", "writer": "dududu"}, {"id": 16, "title": "anshof", "isbn": "450010", "writer": "dududu"}, {"id": 17, "title": "nia", "isbn": "450010", "writer": "dududu"}, {"id": 18, "title": "wati", "isbn": "450010", "writer": "dududu"}, {"id": 19, "title": "alul", "isbn": "450010", "writer": "dududu"}, {"id": 20, "title": "oci", "isbn": "450010", "writer": "dududu"}, {"id": 21, "title": "ros", "isbn": "450010", "writer": "dududu"}, {"id": 22, "title": "liani", "isbn": "450010", "writer": "dududu"}, {"id": 23, "title": "putri", "isbn": "450010", "writer": "dududu"}, {"id": 24, "title": "utami", "isbn": "450010", "writer": "dududu"}, {"id": 1, "title": "judul", "isbn": "12345678", "writer": "penulis"}]}
+[2020-04-16 20:56:02,068] {/home/alta16/Documents/project/REST_API_Tugas_2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/book/list?orderby=isbn&sort=desc", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": [{"id": 10, "title": "kur", "isbn": "450010", "writer": "dududu"}, {"id": 15, "title": "ifosh", "isbn": "450010", "writer": "dududu"}, {"id": 16, "title": "anshof", "isbn": "450010", "writer": "dududu"}, {"id": 17, "title": "nia", "isbn": "450010", "writer": "dududu"}, {"id": 18, "title": "wati", "isbn": "450010", "writer": "dududu"}, {"id": 19, "title": "alul", "isbn": "450010", "writer": "dududu"}, {"id": 20, "title": "oci", "isbn": "450010", "writer": "dududu"}, {"id": 21, "title": "ros", "isbn": "450010", "writer": "dududu"}, {"id": 22, "title": "liani", "isbn": "450010", "writer": "dududu"}, {"id": 23, "title": "putri", "isbn": "450010", "writer": "dududu"}, {"id": 24, "title": "utami", "isbn": "450010", "writer": "dududu"}, {"id": 1, "title": "judul", "isbn": "12345678", "writer": "penulis"}]}
+[2020-04-16 21:16:53,637] {/home/alta16/Documents/project/REST_API_Tugas_2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/user/list?", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": []}
+[2020-04-16 21:17:03,123] {/home/alta16/Documents/project/REST_API_Tugas_2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/user?", "request": {"title": "utami", "isbn": "450010", "writer": "dududu"}, "response": []}
+[2020-04-16 21:21:02,837] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /user [PUT]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: put() missing 1 required positional argument: 'id'
+[2020-04-16 21:21:02,842] {/home/alta16/Documents/project/REST_API_Tugas_2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "PUT", "code": "500 INTERNAL SERVER ERROR", "uri": "/user?", "request": {"name": "utami", "age": 4, "sex": "female", "client_id": 1}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 21:21:51,365] {/home/alta16/Documents/project/REST_API_Tugas_2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "PUT", "code": "404 NOT FOUND", "uri": "/user/1?", "request": {"name": "utami", "age": 4, "sex": "female", "client_id": 1}, "response": {"status": "NOT_FOUND"}}
+[2020-04-16 21:22:26,853] {/home/alta16/Documents/project/REST_API_Tugas_2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "PUT", "code": "404 NOT FOUND", "uri": "/user/list/1?", "request": {"name": "utami", "age": 4, "sex": "female", "client_id": 1}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
+[2020-04-16 21:23:41,302] {/home/alta16/Documents/project/REST_API_Tugas_2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "POST", "code": "400 BAD REQUEST", "uri": "/user?", "request": {"name": "utami", "age": 4, "sex": "female", "client_id": 1}, "response": {"message": {"password": "Missing required parameter in the JSON body"}}}
+[2020-04-16 21:26:43,562] {/home/alta16/Documents/project/REST_API_Tugas_2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/user?", "request": {"name": "utami", "age": 4, "sex": "female", "client_id": 1, "password": "12345"}, "response": {"id": 1, "name": "utami", "age": 4, "sex": "female", "client_id": 1}}
+[2020-04-16 21:26:55,830] {/home/alta16/Documents/project/REST_API_Tugas_2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/user/list?", "request": {"name": "utami", "age": 4, "sex": "female", "client_id": 1, "password": "12345"}, "response": [{"id": 1, "name": "utami", "age": 4, "sex": "female", "client_id": 1}]}
+[2020-04-16 21:27:03,945] {/home/alta16/Documents/project/REST_API_Tugas_2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "PUT", "code": "404 NOT FOUND", "uri": "/user/list?", "request": {"name": "utami", "age": 4, "sex": "female", "client_id": 1, "password": "12345"}, "response": {"status": "NOT_FOUND"}}
+[2020-04-16 21:31:33,426] {/home/alta16/Documents/project/REST_API_Tugas_2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "PUT", "code": "200 OK", "uri": "/user/1?", "request": {"name": "shofi", "age": 5, "sex": "female", "client_id": 1, "password": "135"}, "response": {"id": 1, "name": "shofi", "age": 5, "sex": "female", "client_id": 1}}
+[2020-04-16 21:37:20,258] {/home/alta16/Documents/project/REST_API_Tugas_2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/user/1?", "request": {"name": "shofi", "age": 5, "sex": "female", "client_id": 1, "password": "135"}, "response": {"id": 1, "name": "shofi", "age": 5, "sex": "female", "client_id": 1}}
+[2020-04-16 21:37:24,820] {/home/alta16/Documents/project/REST_API_Tugas_2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/user/?", "request": {"name": "shofi", "age": 5, "sex": "female", "client_id": 1, "password": "135"}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
+[2020-04-16 21:37:29,044] {/home/alta16/Documents/project/REST_API_Tugas_2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/user?", "request": {"name": "shofi", "age": 5, "sex": "female", "client_id": 1, "password": "135"}, "response": [{"id": 1, "name": "shofi", "age": 5, "sex": "female", "client_id": 1}]}
+[2020-04-16 21:37:40,249] {/home/alta16/Documents/project/REST_API_Tugas_2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/client?", "request": {"name": "shofi", "age": 5, "sex": "female", "client_id": 1, "password": "135"}, "response": []}
+[2020-04-16 21:37:47,762] {/home/alta16/Documents/project/REST_API_Tugas_2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/client/1?", "request": {"name": "shofi", "age": 5, "sex": "female", "client_id": 1, "password": "135"}, "response": {"status": "NOT_FOUND"}}
+[2020-04-16 21:40:42,671] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /client/1 [POST]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: post() got an unexpected keyword argument 'id'
+[2020-04-16 21:40:42,672] {/home/alta16/Documents/project/REST_API_Tugas_2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/client/1?", "request": {"client_key": "123", "client_secret": "456", "status": "ok", "salt": "dududu"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 21:42:26,600] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /client/1 [POST]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: post() got an unexpected keyword argument 'id'
+[2020-04-16 21:42:26,603] {/home/alta16/Documents/project/REST_API_Tugas_2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/client/1?", "request": {"client_key": "123", "client_secret": "456", "status": "ok", "salt": "dududu"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 21:43:31,101] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /client/1 [POST]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: post() got an unexpected keyword argument 'id'
+[2020-04-16 21:43:31,103] {/home/alta16/Documents/project/REST_API_Tugas_2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/client/1?", "request": {"id": 1, "client_key": "123", "client_secret": "456", "status": "ok", "salt": "dududu"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 21:43:49,710] {/home/alta16/Documents/project/REST_API_Tugas_2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "POST", "code": "404 NOT FOUND", "uri": "/client/?", "request": {"client_key": "123", "client_secret": "456", "status": "ok", "salt": "dududu"}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
+[2020-04-16 21:43:55,356] {/home/alta16/Documents/project/REST_API_Tugas_2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/client?", "request": {"client_key": "123", "client_secret": "456", "status": "ok", "salt": "dududu"}, "response": {"id": 1, "client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15", "status": "ok", "created_at": "2020-04-16 21:43:55", "updated_at": null}}
+[2020-04-16 21:45:56,981] {/home/alta16/Documents/project/REST_API_Tugas_2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/client?", "request": {"client_key": "123", "client_secret": "456", "status": "ok", "salt": "dududu"}, "response": [{"id": 1, "client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15", "status": "ok", "created_at": "2020-04-16 21:43:55", "updated_at": null}]}
+[2020-04-17 10:01:12,535] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/book?", "request": {"name": "Person ke ", "age": 93, "sex": "female"}, "response": [{"id": 1, "title": "judul", "isbn": "12345678", "writer": "penulis"}, {"id": 10, "title": "kur", "isbn": "450010", "writer": "dududu"}, {"id": 15, "title": "ifosh", "isbn": "450010", "writer": "dududu"}, {"id": 16, "title": "anshof", "isbn": "450010", "writer": "dududu"}, {"id": 17, "title": "nia", "isbn": "450010", "writer": "dududu"}, {"id": 18, "title": "wati", "isbn": "450010", "writer": "dududu"}, {"id": 19, "title": "alul", "isbn": "450010", "writer": "dududu"}, {"id": 20, "title": "oci", "isbn": "450010", "writer": "dududu"}, {"id": 21, "title": "ros", "isbn": "450010", "writer": "dududu"}, {"id": 22, "title": "liani", "isbn": "450010", "writer": "dududu"}, {"id": 23, "title": "putri", "isbn": "450010", "writer": "dududu"}, {"id": 24, "title": "utami", "isbn": "450010", "writer": "dududu"}]}
+[2020-04-17 11:32:44,346] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/client?", "request": {"name": "Person ke ", "age": 93, "sex": "female"}, "response": [{"id": 1, "client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15", "status": "ok", "created_at": "2020-04-16 21:43:55", "updated_at": null}]}
+[2020-04-17 11:34:26,700] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:44} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/auth?", "request": {"name": "Person ke ", "age": 93, "sex": "female"}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
+[2020-04-17 11:35:06,212] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/client?", "request": {"client_key": "456", "client_secret": "789", "status": "ok", "salt": "dududu"}, "response": {"id": 2, "client_key": "456", "client_secret": "a121b9f625f0d603eefe6bad1c46f68e428c5da3eed26e18efefd8fe46edad0bf3f15b02a8e1c1dc99e83766c600251f30d43e706a99616a203e7c562c71571e", "status": "ok", "created_at": "2020-04-17 11:35:06", "updated_at": null}}
+[2020-04-17 11:36:03,229] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:44} WARNING-REQUEST_LOG	{"method": "POST", "code": "404 NOT FOUND", "uri": "/auth?", "request": {"client_key": "456", "client_secret": "789"}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
+[2020-04-17 11:37:06,703] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:44} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/auth?", "request": {"client_key": "456", "client_secret": "789"}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
+[2020-04-17 11:37:46,683] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:44} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/auth?", "request": {"client_key": "456", "client_secret": "789"}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
+[2020-04-17 11:38:13,009] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/client?", "request": {"client_key": "456", "client_secret": "789"}, "response": [{"id": 1, "client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15", "status": "ok", "created_at": "2020-04-16 21:43:55", "updated_at": null}, {"id": 2, "client_key": "456", "client_secret": "a121b9f625f0d603eefe6bad1c46f68e428c5da3eed26e18efefd8fe46edad0bf3f15b02a8e1c1dc99e83766c600251f30d43e706a99616a203e7c562c71571e", "status": "ok", "created_at": "2020-04-17 11:35:06", "updated_at": null}]}
+[2020-04-17 11:38:37,973] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:44} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/auth?", "request": {"client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15"}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
+[2020-04-17 11:40:26,241] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/client/1?", "request": {"client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15"}, "response": {"id": 1, "client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15", "status": "ok", "created_at": "2020-04-16 21:43:55", "updated_at": null}}
+[2020-04-17 11:40:52,981] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:44} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/auth?", "request": {"client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15", "status": "ok"}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
+[2020-04-17 11:41:26,782] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:44} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/auth?", "request": {"client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15"}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
+[2020-04-17 11:43:49,723] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:44} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/auth?", "request": {"client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15"}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
+[2020-04-17 12:10:00,538] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:44} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/auth?", "request": {"client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15"}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
+[2020-04-17 12:10:14,178] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:44} WARNING-REQUEST_LOG	{"method": "GET", "code": "404 NOT FOUND", "uri": "/auth/?", "request": {"client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15"}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
+[2020-04-17 12:11:31,130] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:44} WARNING-REQUEST_LOG	{"method": "GET", "code": "400 BAD REQUEST", "uri": "/auth/?", "request": {"client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15"}, "response": {"message": {"client_key": "Missing required parameter in the query string"}}}
+[2020-04-17 12:13:51,564] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/client?", "request": {"client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15"}, "response": [{"id": 1, "client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15", "status": "ok", "created_at": "2020-04-16 21:43:55", "updated_at": null}, {"id": 2, "client_key": "456", "client_secret": "a121b9f625f0d603eefe6bad1c46f68e428c5da3eed26e18efefd8fe46edad0bf3f15b02a8e1c1dc99e83766c600251f30d43e706a99616a203e7c562c71571e", "status": "ok", "created_at": "2020-04-17 11:35:06", "updated_at": null}]}
+[2020-04-17 12:14:31,333] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:44} WARNING-REQUEST_LOG	{"method": "GET", "code": "400 BAD REQUEST", "uri": "/auth?", "request": {"client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15", "status": "ok"}, "response": {"message": {"client_key": "Missing required parameter in the query string"}}}
+[2020-04-17 12:14:42,298] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:44} WARNING-REQUEST_LOG	{"method": "GET", "code": "400 BAD REQUEST", "uri": "/auth/?", "request": {"client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15", "status": "ok"}, "response": {"message": {"client_key": "Missing required parameter in the query string"}}}
+[2020-04-17 12:16:04,103] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:44} WARNING-REQUEST_LOG	{"method": "GET", "code": "400 BAD REQUEST", "uri": "/auth/?", "request": {"client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15", "status": "ok"}, "response": {"message": {"client_key": "Missing required parameter in the query string"}}}
+[2020-04-17 12:16:17,869] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /auth/ [GET]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/auth/__init__.py", line 22, in get
+    encoded = ('%s%s' % (data['client_secret'], qry.salt)).encode('utf-8')
+NameError: name 'data' is not defined
+[2020-04-17 12:16:17,874] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:44} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/auth/?", "request": {"client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15", "status": "ok"}, "response": {"message": "Internal Server Error"}}
+[2020-04-17 12:16:27,241] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /auth/ [GET]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/auth/__init__.py", line 22, in get
+    encoded = ('%s%s' % (data['client_secret'], qry.salt)).encode('utf-8')
+NameError: name 'data' is not defined
+[2020-04-17 12:16:27,242] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:44} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/auth/?", "request": {"client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15"}, "response": {"message": "Internal Server Error"}}
+[2020-04-17 12:17:41,437] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /auth/ [GET]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/auth/__init__.py", line 22, in get
+    encoded = ('%s%s' % (data['client_secret'], qry.salt)).encode('utf-8')
+NameError: name 'data' is not defined
+[2020-04-17 12:17:41,440] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:44} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/auth/?", "request": {"client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15"}, "response": {"message": "Internal Server Error"}}
+[2020-04-17 12:21:29,314] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /auth/ [GET]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/auth/__init__.py", line 22, in get
+    encoded = ('%s%s' % (args['client_secret'], qry.salt)).encode('utf-8')
+NameError: name 'data' is not defined
+[2020-04-17 12:21:29,316] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:44} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/auth/?", "request": {"client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15"}, "response": {"message": "Internal Server Error"}}
+[2020-04-17 12:22:20,938] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /auth/ [GET]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/auth/__init__.py", line 22, in get
+    encoded = ('%s%s' % (args['client_secret'], client_salt)).encode('utf-8')
+NameError: name 'client_salt' is not defined
+[2020-04-17 12:22:20,941] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:44} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/auth/?", "request": {"client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15"}, "response": {"message": "Internal Server Error"}}
+[2020-04-17 12:23:32,937] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /auth/ [GET]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/auth/__init__.py", line 22, in get
+    encoded = ('%s%s' % (args['client_secret'], client_salt)).encode('utf-8')
+NameError: name 'client_salt' is not defined
+[2020-04-17 12:23:32,940] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:44} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/auth/?", "request": {"client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15"}, "response": {"message": "Internal Server Error"}}
+[2020-04-17 12:23:57,040] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /auth/ [GET]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/auth/__init__.py", line 22, in get
+    encoded = ('%s%s' % (args['client_secret'], client_salt)).encode('utf-8')
+NameError: name 'client_salt' is not defined
+[2020-04-17 12:23:57,041] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:44} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/auth/?", "request": {"client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15"}, "response": {"message": "Internal Server Error"}}
+[2020-04-17 12:24:46,803] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /auth [GET]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/auth/__init__.py", line 22, in get
+    encoded = ('%s%s' % (args['client_secret'], client_salt)).encode('utf-8')
+NameError: name 'client_salt' is not defined
+[2020-04-17 12:24:46,804] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:44} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/auth?", "request": {"client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15"}, "response": {"message": "Internal Server Error"}}
+[2020-04-17 12:25:02,950] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /auth [GET]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/auth/__init__.py", line 22, in get
+    encoded = ('%s%s' % (args['client_secret'], client_salt)).encode('utf-8')
+NameError: name 'client_salt' is not defined
+[2020-04-17 12:25:02,951] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:44} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/auth?", "request": {"client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15", "status": "ok"}, "response": {"message": "Internal Server Error"}}
+[2020-04-17 12:26:01,648] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /auth [GET]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/auth/__init__.py", line 22, in get
+    encoded = ('%s%s' % (args['client_secret'], client_salt)).encode('utf-8')
+NameError: name 'client_salt' is not defined
+[2020-04-17 12:26:01,649] {/home/alta16/Documents/project/REST_API_Tugas_3/blueprints/__init__.py:44} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/auth?", "request": {"client_key": "123", "client_secret": "c1fd8df4ea71df3d7ee03415aea8edb1438baeb1005ecab057f8ffe1c11c287e395d4f20e88866b7221cdf5b375a8a95df8636a43ea488b5b15893e8f30d9d15", "status": "ok"}, "response": {"message": "Internal Server Error"}}

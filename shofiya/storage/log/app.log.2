@@ -1,0 +1,1183 @@
+[2020-04-16 09:51:34,909] {/home/alta16/Documents/project/REST API Tugas 2/app.py:17} WARNING-REQUEST_LOG	{"request": {}, "response": []}
+[2020-04-16 09:56:13,625] {/home/alta16/Documents/project/REST API Tugas 2/app.py:18} WARNING-REQUEST_LOG	{"request": {}, "response": []}
+[2020-04-16 09:56:43,417] {/home/alta16/Documents/project/REST API Tugas 2/app.py:18} WARNING-REQUEST_LOG	{"request": {}, "response": {"status": "NOT_FOUND", "message": "Book not found"}}
+[2020-04-16 10:04:21,486] {/home/alta16/Documents/project/REST API Tugas 2/app.py:18} WARNING-REQUEST_LOG	{"request": {}, "response": {"status": "NOT_FOUND", "message": "Book not found"}}
+[2020-04-16 10:06:25,293] {/home/alta16/Documents/project/REST API Tugas 2/app.py:18} WARNING-REQUEST_LOG	{"request": {}, "response": {"status": "NOT_FOUND", "message": "Book not found"}}
+[2020-04-16 10:06:31,894] {/home/alta16/Documents/project/REST API Tugas 2/app.py:18} WARNING-REQUEST_LOG	{"request": {}, "response": []}
+[2020-04-16 10:06:39,122] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book [DELETE]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: delete() missing 1 required positional argument: 'id'
+[2020-04-16 10:13:55,415] {/home/alta16/Documents/project/REST API Tugas 2/app.py:18} WARNING-REQUEST_LOG	{"request": {}, "response": []}
+[2020-04-16 10:15:14,628] {/home/alta16/Documents/project/REST API Tugas 2/app.py:18} WARNING-REQUEST_LOG	{"request": {}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
+[2020-04-16 10:17:28,129] {/home/alta16/Documents/project/REST API Tugas 2/app.py:18} WARNING-REQUEST_LOG	{"request": {}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
+[2020-04-16 10:17:33,861] {/home/alta16/Documents/project/REST API Tugas 2/app.py:18} WARNING-REQUEST_LOG	{"request": {}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
+[2020-04-16 10:17:39,716] {/home/alta16/Documents/project/REST API Tugas 2/app.py:18} WARNING-REQUEST_LOG	{"request": {}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
+[2020-04-16 10:18:12,541] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book/1 [POST]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: post() got an unexpected keyword argument 'id'
+[2020-04-16 10:19:45,248] {app.py:27} ERROR-
+[2020-04-16 10:19:49,921] {app.py:27} ERROR-
+[2020-04-16 10:19:59,969] {app.py:27} ERROR-
+[2020-04-16 10:20:56,049] {app.py:25} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/book?", "request": {}, "response": []}
+[2020-04-16 10:21:04,707] {app.py:27} ERROR-
+[2020-04-16 10:22:14,139] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book [PUT]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: put() missing 1 required positional argument: 'id'
+[2020-04-16 10:22:14,142] {app.py:27} ERROR-
+[2020-04-16 10:22:49,021] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book [PUT]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: put() missing 1 required positional argument: 'id'
+[2020-04-16 10:22:49,022] {app.py:27} ERROR-
+[2020-04-16 10:23:37,658] {app.py:25} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/book?", "request": {}, "response": []}
+[2020-04-16 10:24:40,211] {app.py:27} ERROR-
+[2020-04-16 10:24:56,442] {app.py:25} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/book?", "request": {}, "response": []}
+[2020-04-16 10:25:05,254] {app.py:27} ERROR-
+[2020-04-16 10:25:33,183] {app.py:27} ERROR-
+[2020-04-16 10:27:43,693] {app.py:40} WARNING-REQUEST_LOG	{"method": "POST", "code": "400 BAD REQUEST", "uri": "/book?", "request": {}, "response": {"message": "The browser (or proxy) sent a request that this server could not understand."}}
+[2020-04-16 10:28:24,184] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book [PUT]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: put() missing 1 required positional argument: 'id'
+[2020-04-16 10:28:24,186] {app.py:40} WARNING-REQUEST_LOG	{"method": "PUT", "code": "500 INTERNAL SERVER ERROR", "uri": "/book?", "request": {}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 14:44:31,869] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book [POST]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta16/Documents/project/REST API Tugas 2/blueprints/book/resources.py", line 32, in post
+    book = Books(args['title'], args['isbn'], args['writer'])
+TypeError: __init__() takes 1 positional argument but 4 were given
+[2020-04-16 14:44:31,872] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/book?", "request": {"title": "judul", "isbn": "12345678", "writer": "penulis"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 14:45:38,886] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book/1 [POST]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: post() got an unexpected keyword argument 'id'
+[2020-04-16 14:45:38,888] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/book/1?", "request": {"title": "judul", "isbn": "12345678", "writer": "penulis"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 14:47:08,222] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book/1 [POST]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: post() got an unexpected keyword argument 'id'
+[2020-04-16 14:47:08,225] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/book/1?", "request": {"title": "judul", "isbn": "12345678", "writer": "penulis"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 14:47:43,250] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book/1 [GET]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta16/Documents/project/REST API Tugas 2/blueprints/book/resources.py", line 19, in get
+    qry = Books.query.get(id) #get by id
+AttributeError: type object 'Books' has no attribute 'query'
+[2020-04-16 14:47:43,251] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/book/1?", "request": {"title": "judul", "isbn": "12345678", "writer": "penulis"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 14:47:48,670] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book [GET]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: get() missing 1 required positional argument: 'id'
+[2020-04-16 14:47:48,671] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/book?", "request": {"title": "judul", "isbn": "12345678", "writer": "penulis"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 14:48:19,323] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book [GET]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: get() missing 1 required positional argument: 'id'
+[2020-04-16 14:48:19,324] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/book?", "request": {"title": "judul", "isbn": "12345678", "writer": "penulis"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 14:49:11,574] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book [GET]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: get() missing 1 required positional argument: 'id'
+[2020-04-16 14:49:11,576] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/book?", "request": {"title": "judul", "isbn": "12345678", "writer": "penulis"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 14:54:25,703] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book/1 [POST]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: post() got an unexpected keyword argument 'id'
+[2020-04-16 14:54:25,704] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/book/1?", "request": {"title": "judul", "isbn": "12345678", "writer": "penulis"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 14:54:30,850] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book [POST]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta16/Documents/project/REST API Tugas 2/blueprints/book/resources.py", line 32, in post
+    book = Books(args['title'], args['isbn'], args['writer'])
+TypeError: __init__() takes 1 positional argument but 4 were given
+[2020-04-16 14:54:30,851] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/book?", "request": {"title": "judul", "isbn": "12345678", "writer": "penulis"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 14:54:58,423] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book [POST]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta16/Documents/project/REST API Tugas 2/blueprints/book/resources.py", line 32, in post
+    book = Books(args['title'], args['isbn'], args['writer'])
+TypeError: __init__() takes 1 positional argument but 4 were given
+[2020-04-16 14:54:58,424] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/book?", "request": {"title": "judul", "isbn": "12345678", "writer": "penulis"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 14:55:58,899] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/book?", "request": {"title": "judul", "isbn": "12345678", "writer": "penulis"}, "response": {"id": 1, "title": "judul", "isbn": "12345678", "writer": "penulis"}}
+[2020-04-16 14:56:06,956] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book [GET]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: get() missing 1 required positional argument: 'id'
+[2020-04-16 14:56:06,958] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/book?", "request": {"title": "judul", "isbn": "12345678", "writer": "penulis"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 14:56:12,516] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/book/1?", "request": {"title": "judul", "isbn": "12345678", "writer": "penulis"}, "response": {"id": 1, "title": "judul", "isbn": "12345678", "writer": "penulis"}}
+[2020-04-16 14:56:37,448] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "PUT", "code": "200 OK", "uri": "/book/1?", "request": {"title": "judul", "isbn": "12345678", "writer": "penulis"}, "response": {"id": 1, "title": "judul", "isbn": "12345678", "writer": "penulis"}}
+[2020-04-16 14:58:49,348] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "GET", "code": "200 OK", "uri": "/book/1?", "request": {"title": "judul", "isbn": "12345678", "writer": "penulis"}, "response": {"id": 1, "title": "judul", "isbn": "12345678", "writer": "penulis"}}
+[2020-04-16 14:58:57,166] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book/1 [POST]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: post() got an unexpected keyword argument 'id'
+[2020-04-16 14:58:57,167] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/book/1?", "request": {"title": "judul", "isbn": "12345678", "writer": "penulis"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 14:59:03,498] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book [POST]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry 'judul' for key 'title'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta16/Documents/project/REST API Tugas 2/blueprints/book/resources.py", line 34, in post
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1036, in commit
+    self.transaction.commit()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 503, in commit
+    self._prepare_impl()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 482, in _prepare_impl
+    self.session.flush()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2496, in flush
+    self._flush(objects)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2637, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    flush_context.execute()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1136, in _emit_insert_statements
+    statement, params
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1103, in _execute_clauseelement
+    distilled_params,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1288, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1482, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.IntegrityError: (pymysql.err.IntegrityError) (1062, "Duplicate entry 'judul' for key 'title'")
+[SQL: INSERT INTO books (title, isbn, writer, updated_at, deleted_at) VALUES (%(title)s, %(isbn)s, %(writer)s, %(updated_at)s, %(deleted_at)s)]
+[parameters: {'title': 'judul', 'isbn': '12345678', 'writer': 'penulis', 'updated_at': None, 'deleted_at': None}]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+[2020-04-16 14:59:03,506] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/book?", "request": {"title": "judul", "isbn": "12345678", "writer": "penulis"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 14:59:25,464] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book [POST]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry 'judul' for key 'title'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta16/Documents/project/REST API Tugas 2/blueprints/book/resources.py", line 34, in post
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1036, in commit
+    self.transaction.commit()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 503, in commit
+    self._prepare_impl()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 482, in _prepare_impl
+    self.session.flush()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2496, in flush
+    self._flush(objects)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2637, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    flush_context.execute()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1136, in _emit_insert_statements
+    statement, params
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1103, in _execute_clauseelement
+    distilled_params,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1288, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1482, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.IntegrityError: (pymysql.err.IntegrityError) (1062, "Duplicate entry 'judul' for key 'title'")
+[SQL: INSERT INTO books (title, isbn, writer, updated_at, deleted_at) VALUES (%(title)s, %(isbn)s, %(writer)s, %(updated_at)s, %(deleted_at)s)]
+[parameters: {'title': 'judul', 'isbn': '12345678', 'writer': 'penulis', 'updated_at': None, 'deleted_at': None}]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+[2020-04-16 14:59:25,466] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/book?", "request": {"title": "judul", "isbn": "12345678", "writer": "penulis"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 15:00:03,212] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book [POST]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry '12345678' for key 'isbn'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta16/Documents/project/REST API Tugas 2/blueprints/book/resources.py", line 34, in post
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1036, in commit
+    self.transaction.commit()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 503, in commit
+    self._prepare_impl()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 482, in _prepare_impl
+    self.session.flush()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2496, in flush
+    self._flush(objects)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2637, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    flush_context.execute()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1136, in _emit_insert_statements
+    statement, params
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1103, in _execute_clauseelement
+    distilled_params,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1288, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1482, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.IntegrityError: (pymysql.err.IntegrityError) (1062, "Duplicate entry '12345678' for key 'isbn'")
+[SQL: INSERT INTO books (title, isbn, writer, updated_at, deleted_at) VALUES (%(title)s, %(isbn)s, %(writer)s, %(updated_at)s, %(deleted_at)s)]
+[parameters: {'title': 'judul beda', 'isbn': '12345678', 'writer': 'penulis', 'updated_at': None, 'deleted_at': None}]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+[2020-04-16 15:00:03,214] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/book?", "request": {"title": "judul beda", "isbn": "12345678", "writer": "penulis"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 15:00:33,693] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book [POST]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry '12345678' for key 'isbn'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta16/Documents/project/REST API Tugas 2/blueprints/book/resources.py", line 34, in post
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1036, in commit
+    self.transaction.commit()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 503, in commit
+    self._prepare_impl()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 482, in _prepare_impl
+    self.session.flush()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2496, in flush
+    self._flush(objects)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2637, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    flush_context.execute()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1136, in _emit_insert_statements
+    statement, params
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1103, in _execute_clauseelement
+    distilled_params,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1288, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1482, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.IntegrityError: (pymysql.err.IntegrityError) (1062, "Duplicate entry '12345678' for key 'isbn'")
+[SQL: INSERT INTO books (title, isbn, writer, updated_at, deleted_at) VALUES (%(title)s, %(isbn)s, %(writer)s, %(updated_at)s, %(deleted_at)s)]
+[parameters: {'title': 'beda', 'isbn': '12345678', 'writer': 'penulis', 'updated_at': None, 'deleted_at': None}]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+[2020-04-16 15:00:33,696] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/book?", "request": {"title": "beda", "isbn": "12345678", "writer": "penulis"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 15:00:53,980] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book [POST]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry 'penulis' for key 'writer'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta16/Documents/project/REST API Tugas 2/blueprints/book/resources.py", line 34, in post
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1036, in commit
+    self.transaction.commit()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 503, in commit
+    self._prepare_impl()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 482, in _prepare_impl
+    self.session.flush()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2496, in flush
+    self._flush(objects)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2637, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    flush_context.execute()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1136, in _emit_insert_statements
+    statement, params
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1103, in _execute_clauseelement
+    distilled_params,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1288, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1482, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.IntegrityError: (pymysql.err.IntegrityError) (1062, "Duplicate entry 'penulis' for key 'writer'")
+[SQL: INSERT INTO books (title, isbn, writer, updated_at, deleted_at) VALUES (%(title)s, %(isbn)s, %(writer)s, %(updated_at)s, %(deleted_at)s)]
+[parameters: {'title': 'beda', 'isbn': '9101112', 'writer': 'penulis', 'updated_at': None, 'deleted_at': None}]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+[2020-04-16 15:00:53,982] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/book?", "request": {"title": "beda", "isbn": "9101112", "writer": "penulis"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 15:01:03,281] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book [POST]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry 'penulis' for key 'writer'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta16/Documents/project/REST API Tugas 2/blueprints/book/resources.py", line 34, in post
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1036, in commit
+    self.transaction.commit()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 503, in commit
+    self._prepare_impl()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 482, in _prepare_impl
+    self.session.flush()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2496, in flush
+    self._flush(objects)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2637, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    flush_context.execute()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1136, in _emit_insert_statements
+    statement, params
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1103, in _execute_clauseelement
+    distilled_params,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1288, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1482, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.IntegrityError: (pymysql.err.IntegrityError) (1062, "Duplicate entry 'penulis' for key 'writer'")
+[SQL: INSERT INTO books (title, isbn, writer, updated_at, deleted_at) VALUES (%(title)s, %(isbn)s, %(writer)s, %(updated_at)s, %(deleted_at)s)]
+[parameters: {'title': 'diff', 'isbn': '9101112', 'writer': 'penulis', 'updated_at': None, 'deleted_at': None}]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+[2020-04-16 15:01:03,286] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/book?", "request": {"title": "diff", "isbn": "9101112", "writer": "penulis"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 15:01:36,655] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book [POST]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry 'penulis' for key 'writer'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta16/Documents/project/REST API Tugas 2/blueprints/book/resources.py", line 33, in post
+    db.session.commit()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1036, in commit
+    self.transaction.commit()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 503, in commit
+    self._prepare_impl()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 482, in _prepare_impl
+    self.session.flush()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2496, in flush
+    self._flush(objects)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2637, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    flush_context.execute()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1136, in _emit_insert_statements
+    statement, params
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1103, in _execute_clauseelement
+    distilled_params,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1288, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1482, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.IntegrityError: (pymysql.err.IntegrityError) (1062, "Duplicate entry 'penulis' for key 'writer'")
+[SQL: INSERT INTO books (title, isbn, writer, updated_at, deleted_at) VALUES (%(title)s, %(isbn)s, %(writer)s, %(updated_at)s, %(deleted_at)s)]
+[parameters: {'title': 'shofi', 'isbn': '450-10', 'writer': 'penulis', 'updated_at': None, 'deleted_at': None}]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+[2020-04-16 15:01:36,667] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/book?", "request": {"title": "shofi", "isbn": "450-10", "writer": "penulis"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 15:02:33,928] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book [POST]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry 'penulis' for key 'writer'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta16/Documents/project/REST API Tugas 2/blueprints/book/resources.py", line 33, in post
+    db.session.commit()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1036, in commit
+    self.transaction.commit()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 503, in commit
+    self._prepare_impl()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 482, in _prepare_impl
+    self.session.flush()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2496, in flush
+    self._flush(objects)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2637, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    flush_context.execute()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1136, in _emit_insert_statements
+    statement, params
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1103, in _execute_clauseelement
+    distilled_params,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1288, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1482, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.IntegrityError: (pymysql.err.IntegrityError) (1062, "Duplicate entry 'penulis' for key 'writer'")
+[SQL: INSERT INTO books (title, isbn, writer, updated_at, deleted_at) VALUES (%(title)s, %(isbn)s, %(writer)s, %(updated_at)s, %(deleted_at)s)]
+[parameters: {'title': 'shofi', 'isbn': '450-10', 'writer': 'penulis', 'updated_at': None, 'deleted_at': None}]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+[2020-04-16 15:02:33,937] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/book?", "request": {"title": "shofi", "isbn": "450-10", "writer": "penulis"}, "response": {"message": "Internal Server Error"}}
+[2020-04-16 15:02:50,397] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:30} WARNING-REQUEST_LOG	{"method": "POST", "code": "200 OK", "uri": "/book?", "request": {"title": "aisyah", "isbn": "450--0010", "writer": "writer"}, "response": {"id": 10, "title": "aisyah", "isbn": "450--0010", "writer": "writer"}}
+[2020-04-16 15:31:10,329] {/home/alta16/.local/lib/python3.6/site-packages/flask/app.py:1892} ERROR-Exception on /book [POST]
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry '450--0010' for key 'isbn'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/flask_restful/__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta16/Documents/project/REST API Tugas 2/blueprints/book/resources.py", line 33, in post
+    db.session.commit()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1036, in commit
+    self.transaction.commit()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 503, in commit
+    self._prepare_impl()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 482, in _prepare_impl
+    self.session.flush()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2496, in flush
+    self._flush(objects)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2637, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
+    exc_value, with_traceback=exc_tb,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2597, in _flush
+    flush_context.execute()
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1136, in _emit_insert_statements
+    statement, params
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 984, in execute
+    return meth(self, multiparams, params)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 293, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1103, in _execute_clauseelement
+    distilled_params,
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1288, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1482, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
+    raise exception
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1248, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta16/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 590, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta16/.local/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.IntegrityError: (pymysql.err.IntegrityError) (1062, "Duplicate entry '450--0010' for key 'isbn'")
+[SQL: INSERT INTO books (title, isbn, writer, updated_at, deleted_at) VALUES (%(title)s, %(isbn)s, %(writer)s, %(updated_at)s, %(deleted_at)s)]
+[parameters: {'title': 'alul', 'isbn': '450--0010', 'writer': 'writer', 'updated_at': None, 'deleted_at': None}]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+[2020-04-16 15:31:10,332] {/home/alta16/Documents/project/REST API Tugas 2/blueprints/__init__.py:37} WARNING-REQUEST_LOG	{"method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/book?", "request": {"title": "alul", "isbn": "450--0010", "writer": "writer"}, "response": {"message": "Internal Server Error"}}
