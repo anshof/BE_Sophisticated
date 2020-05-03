@@ -1,16 +1,15 @@
 import json
-import hashlib
-import uuid
 from flask import Blueprint
 from flask_restful import Api, Resource, marshal, reqparse, inputs
 from .model import Transactions
 from blueprints import db, app
 from sqlalchemy import desc
-from blueprints import internal_required
+from blueprints import buyer_required
 from flask_jwt_extended import create_access_token, get_jwt_identity, jwt_required, get_jwt_claims
 from blueprints.customer.model import Customers
 from blueprints.product.model import Products
-
+from blueprints.transaction_detail.model import TransactionDetails
+from datetime import datetime
 bp_transaction = Blueprint('transaction', __name__)
 api = Api(bp_transaction)
 
@@ -19,8 +18,7 @@ class TransactionResource(Resource):
     def __init__(self):
         pass
 
-    # @internal_required
-    # untuk buyer
+    @buyer_required
     def get(self):
         claims = get_jwt_claims()
         qry = Transactions.query.get(claims['id'])
@@ -28,12 +26,15 @@ class TransactionResource(Resource):
             return marshal(qry, Transactions.response_field), 200
         return {'status': 'NOT_FOUND'}, 404
 
-    # @jwt_required
-    # @user_required
+    @buyer_required
     def post(self):  # menambah produk ke keranjang user
         parser = reqparse.RequestParser()
         parser.add_argument("product_id", type=int, location="json")
         parser.add_argument("qty", type=int, location="json")
+        parser.add_argument("shipping_method", type=int, location="json")
+
+        parser.add_argument("payment_method_id", type=int, location="json")
+
         args = parser.parse_args()
 
         claims = get_jwt_claims()
@@ -47,7 +48,7 @@ class TransactionResource(Resource):
 
         if transaction is None:
             transaction = Transactions(
-                customer_id, payment_method_id, shipping_method_id)
+                customer_id, args['payment_method_id'], args['shipping_method_id'])
             db.session.add(transaction)
             db.session.commit()
 

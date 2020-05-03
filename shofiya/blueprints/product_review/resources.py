@@ -5,7 +5,7 @@ from .model import ProductReviews
 from blueprints.customer.model import Customers
 from blueprints.transaction.model import Transactions
 from blueprints.transaction_detail.model import TransactionDetails
-from blueprints import internal_required
+from blueprints import admin_required, buyer_required, seller_required
 from blueprints import db, app
 
 bp_product_review = Blueprint('product_review', __name__)
@@ -16,7 +16,6 @@ class ProductReviewList(Resource):
     def __init__(self):
         pass
 
-    # @internal_required
     def get(self):
         parser = reqparse.RequestParser()
         parser.add_argument('p', type=int, location='args', default=1)
@@ -38,8 +37,7 @@ class ProductReviewResource(Resource):
     def __init__(self):
         pass
 
-    # buyer only
-    # @internal_required
+    @buyer_required
     def post(self):
         parser = reqparse.RequestParser()
         parser.add_argument('picture', location='json')
@@ -56,7 +54,7 @@ class ProductReviewResource(Resource):
         trans_id = qry_transaction.id
         qry_transdetail = TransactionDetails.query.filter_by(
             transaction_id=trans_id).first()
-        transdetail_id qry_transdetail.id
+        transdetail_id = qry_transdetail.id
 
         product_review = ProductReviews(
             data['picture'], data['review'], data['transaction_detail_id'])
@@ -67,8 +65,8 @@ class ProductReviewResource(Resource):
 
         return marshal(product_review, ProductReviews.response_field), 200, {'Content-Type': 'application/json'}
 
-    # admin atau buyer
-    # @internal_required
+    @buyer_required
+    @admin_required
     def delete(self, id):
         qry = ProductReviews.query.get(id)
         if qry is None:

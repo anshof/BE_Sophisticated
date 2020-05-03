@@ -1,7 +1,6 @@
 from flask import Blueprint
 from flask_restful import Api, Resource, reqparse, marshal
 from flask_jwt_extended import create_access_token, get_jwt_identity, jwt_required, get_jwt_claims
-from blueprints import internal_required
 from ..client.model import Clients
 import hashlib
 import uuid
@@ -35,14 +34,4 @@ class CreateTokenResource(Resource):
         return {'status': 'UNAUTHORIZED', 'message': 'invalid username or password'}, 404
 
 
-# class RefreshTokenresource(Resource):
-#     @jwt_required
-#     def post(self):
-#         current_user = get_jwt_identity()
-#         claims = get_jwt_claims()
-#         token = create_access_token(identity=current_user, user_claims=claims)
-#         return {'claims': claims, 'token': token}, 200
-
-
-# api.add_resource(RefreshTokenresource, '/refresh')
 api.add_resource(CreateTokenResource, '')

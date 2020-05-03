@@ -1,15 +1,3 @@
-from blueprints.client.resources import bp_client
-from blueprints.customer.resources import bp_customer
-from blueprints.login import bp_login
-from blueprints.payment_method import bp_payment_method
-from blueprints.pic_product.resources import bp_pic_product
-from blueprints.product.resources import bp_product
-from blueprints.product_review.resources import bp_product_review
-from blueprints.product_type.resources import bp_product_type
-from blueprints.seller.resources import bp_seller
-from blueprints.shipping_method.resources import bp_shipping_method
-from blueprints.transaction.resources import bp_transaction
-
 import json
 import config
 import os
@@ -98,6 +86,17 @@ def after_request(response):
 
     return response
 
+from blueprints.client.resources import bp_client
+from blueprints.transaction.resources import bp_transaction
+from blueprints.shipping_method.resources import bp_shipping_method
+from blueprints.seller.resources import bp_seller
+from blueprints.product_type.resources import bp_product_type
+from blueprints.product_review.resources import bp_product_review
+from blueprints.product.resources import bp_product
+from blueprints.pic_product.resources import bp_pic_product
+from blueprints.payment_method.resources import bp_payment_method
+from blueprints.login import bp_login
+from blueprints.customer.resources import bp_customer
 
 app.register_blueprint(bp_client, url_prefix='/client')
 app.register_blueprint(bp_customer, url_prefix='/customer')

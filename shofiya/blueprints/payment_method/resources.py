@@ -5,7 +5,7 @@ from .model import PaymentMethods
 
 import hashlib
 import uuid
-from blueprints import internal_required
+from blueprints import admin_required, buyer_required, seller_required
 from blueprints import db, app
 
 bp_payment_method = Blueprint('payment_method', __name__)
@@ -16,7 +16,9 @@ class PaymentMethodList(Resource):
     def __init__(self):
         pass
 
-    # @internal_required
+    @buyer_required
+    @admin_required
+    @seller_required
     def get(self):
         parser = reqparse.RequestParser()
         parser.add_argument('p', type=int, location='args', default=1)
@@ -38,7 +40,7 @@ class PaymentMethodResource(Resource):
         pass
 
     # just for admin
-    # @internal_required
+    @admin_required
     def post(self):
         parser = reqparse.RequestParser()
         parser.add_argument('name', location='json', required=True)
@@ -52,7 +54,9 @@ class PaymentMethodResource(Resource):
 
         return marshal(payment_method, PaymentMethods.response_field), 200, {'Content-Type': 'application/json'}
 
-    # @internal_required
+    @buyer_required
+    @admin_required
+    @seller_required
     def get(self, id):
         qry = PaymentMethods.query.get(id)
         if qry is not None:
@@ -60,7 +64,7 @@ class PaymentMethodResource(Resource):
         return {'status': 'NOT_FOUND'}, 404
 
     # just for admin
-    # @internal_required
+    @admin_required
     def patch(self, id):
         parser = reqparse.RequestParser()
         parser.add_argument('name', location='json')
@@ -76,7 +80,7 @@ class PaymentMethodResource(Resource):
 
         return marshal(qry, PaymentMethods.response_field), 200
 
-    # @internal_required
+    @admin_required
     def delete(self, id):
         qry = PaymentMethods.query.get(id)
         if qry is None:

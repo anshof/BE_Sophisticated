@@ -4,12 +4,12 @@ import uuid
 from flask import Blueprint
 from flask_restful import Api, Resource, marshal, reqparse, inputs
 from .model import Products
-from blueprints.seller.model import Seler
+from blueprints.seller.model import Sellers
 from blueprints.product_type.model import ProductTypes
 
 from blueprints import db, app
 from sqlalchemy import desc
-from blueprints import internal_required
+from blueprints import admin_required, buyer_required, seller_required
 from flask_jwt_extended import create_access_token, get_jwt_identity, jwt_required, get_jwt_claims
 
 bp_product = Blueprint('product', __name__)
@@ -17,6 +17,7 @@ api = Api(bp_product)
 
 
 class ProductPromo(Resource):
+
     def get(self):  # mengambil data yang memiliki promo discount
         parser = reqparse.RequestParser()
         parser.add_argument('p', type=int, location='args', default=1)
@@ -47,14 +48,13 @@ class ProductResource(Resource):
     def __init__(self):
         pass
 
-    # @internal_required
     def get(self):
         qry = Products.query.get(id)
         if qry is not None:
             return marshal(qry, Products.response_field), 200
         return {'status': 'NOT_FOUND'}, 404
-    # @internal_required
 
+    @seller_required
     def post(self):
         parser = reqparse.RequestParser()
         parser.add_argument('name', location='json', required=True)
@@ -80,6 +80,7 @@ class ProductResource(Resource):
 
         return marshal(product, Products.response_field), 200, {'Content-Type': 'application/json'}
 
+    @seller_required
     def patch(self, id):
 
         parser = reqparse.RequestParser()
@@ -116,6 +117,8 @@ class ProductResource(Resource):
 
         return marshal(product, Products.response_field), 200
 
+    @seller_required
+    @admin_required
     def delete(self, id):
         claims = get_jwt_claims()
         qry_seller = Sellers.query.filter_by(client_id=claims['id'])
@@ -134,7 +137,6 @@ class ProductList(Resource):
     def __init__(self):
         pass
 
-    # @internal_required
     def get(self):
         parser = reqparse.RequestParser()
         parser.add_argument('p', type=int, location='args', default=1)
@@ -221,7 +223,7 @@ class ProductSearch(Resource):
                 product = product.order_by(desc(Products.sold))
 
         rows = []
-        for row in qry.limit(args['rp']).offset(offset).all():
+        for row in product.limit(args['rp']).offset(offset).all():
             rows.append(marshal(row, ProductTypes.response_field))
 
         return rows, 200

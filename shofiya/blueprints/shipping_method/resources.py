@@ -4,7 +4,7 @@ from sqlalchemy import desc
 from .model import ShippingMethods
 import hashlib
 import uuid
-from blueprints import internal_required
+from blueprints import admin_required
 from blueprints import db, app
 
 bp_shipping_method = Blueprint('shipping_method', __name__)
@@ -15,7 +15,6 @@ class ShippingMethodList(Resource):
     def __init__(self):
         pass
 
-    # @internal_required
     def get(self):
         parser = reqparse.RequestParser()
         parser.add_argument('p', type=int, location='args', default=1)
@@ -37,7 +36,7 @@ class ShippingMethodResource(Resource):
         pass
 
     # admin only
-    # @internal_required
+    @admin_required
     def post(self):
         parser = reqparse.RequestParser()
         parser.add_argument('courier', location='json', required=True)
@@ -52,8 +51,6 @@ class ShippingMethodResource(Resource):
 
         return marshal(shipping_method, ShippingMethods.response_field), 200, {'Content-Type': 'application/json'}
 
-    # all
-    # @internal_required
     def get(self, id):
         qry = ShippingMethods.query.get(id)
         if qry is not None:
@@ -61,7 +58,7 @@ class ShippingMethodResource(Resource):
         return {'status': 'NOT_FOUND'}, 404
 
     # admin only
-    # @internal_required
+    @admin_required
     def patch(self, id):
         parser = reqparse.RequestParser()
         parser.add_argument('courier', location='json')
@@ -79,7 +76,7 @@ class ShippingMethodResource(Resource):
         return marshal(qry, ShippingMethods.response_field), 200
 
     # admin only
-    # @internal_required
+    @admin_required
     def delete(self, id):
         qry = ShippingMethods.query.get(id)
         if qry is None:

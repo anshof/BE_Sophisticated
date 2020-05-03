@@ -2,10 +2,11 @@ from flask import Blueprint
 from flask_restful import Api, reqparse, Resource, marshal, inputs
 from sqlalchemy import desc
 from .model import PicProducts
+from flask_jwt_extended import create_access_token, get_jwt_identity, jwt_required, get_jwt_claims
 
 import hashlib
 import uuid
-from blueprints import internal_required
+from blueprints import seller_required
 from blueprints import db, app
 
 bp_pic_product = Blueprint('pic_product', __name__)
@@ -16,7 +17,6 @@ class PicProductList(Resource):
     def __init__(self):
         pass
 
-    # @internal_required
     def get(self):
         parser = reqparse.RequestParser()
         parser.add_argument('p', type=int, location='args', default=1)
@@ -45,7 +45,7 @@ class PicProductResource(Resource):
     def __init__(self):
         pass
 
-    # @internal_required
+    @seller_required
     def post(self):
         parser = reqparse.RequestParser()
         parser.add_argument('picture', location='json', required=True)
@@ -70,7 +70,6 @@ class PicProductResource(Resource):
 
         return marshal(pic_product, PicProducts.response_field), 200, {'Content-Type': 'application/json'}
 
-    # @internal_required
     def get(self, id):
         qry = PicProducts.query.get(id)
         if qry is not None:

@@ -2,9 +2,7 @@ from flask import Blueprint
 from flask_restful import Api, reqparse, Resource, marshal, inputs
 from sqlalchemy import desc
 from .model import ProductTypes
-import hashlib
-import uuid
-from blueprints import internal_required
+from blueprints import admin_required, buyer_required, seller_required
 from blueprints import db, app
 
 bp_product_type = Blueprint('product_type', __name__)
@@ -15,7 +13,6 @@ class ProductTypeList(Resource):
     def __init__(self):
         pass
 
-    # @internal_required
     def get(self):
         parser = reqparse.RequestParser()
         parser.add_argument('p', type=int, location='args', default=1)
@@ -36,7 +33,7 @@ class ProductTypeResource(Resource):
     def __init__(self):
         pass
 
-    # @internal_required
+    @admin_required
     def post(self):
         parser = reqparse.RequestParser()
         parser.add_argument('name', location='json', required=True)
@@ -51,14 +48,13 @@ class ProductTypeResource(Resource):
 
         return marshal(product_type, ProductTypes.response_field), 200, {'Content-Type': 'application/json'}
 
-    # @internal_required
     def get(self, id):
         qry = ProductTypes.query.get(id)
         if qry is not None:
             return marshal(qry, ProductTypes.response_field), 200
         return {'status': 'NOT_FOUND'}, 404
 
-    # @internal_required
+    @admin_required
     def patch(self, id):
         parser = reqparse.RequestParser()
         parser.add_argument('name', location='json')
@@ -74,7 +70,7 @@ class ProductTypeResource(Resource):
 
         return marshal(qry, ProductTypes.response_field), 200
 
-    # @internal_required
+    @admin_required
     def delete(self, id):
         qry = ProductTypes.query.get(id)
         if qry is None:
